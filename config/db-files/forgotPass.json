@@ -1,0 +1,40 @@
+{
+  "forgotPass": [
+    {
+      "id": 100,
+      "username": "jayant",
+      "status": 200,
+      "message": "Link Sent!!! Check your Email."
+    },
+    {
+      "id": 101,
+      "username": "jodie",
+      "status": 200,
+      "message": "Link Sent!!! Check your Email."
+    },
+    {
+      "id": 102,
+      "username": "ranjan",
+      "status": 200,
+      "message": "Link Sent!!! Check your Email."
+    },
+    {
+      "id": 103,
+      "username": "saqib",
+      "status": 200,
+      "message": "Link Sent!!! Check your Email."
+    },
+    {
+      "id": 104,
+      "username": "ravi",
+      "status": 200,
+      "message": "Link Sent!!! Check your Email."
+    },
+    {
+      "id": 105,
+      "username": "abhi",
+      "status": 200,
+      "message": "Link Sent!!! Check your Email."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "getInboxFilters": [
+    {
+      "subFilterName": "equipment",
+      "subFilterId": "subfilter-1",
+      "displaySubFilterName": "Equipment"
+    },
+    {
+      "subFilterName": "material",
+      "subFilterId": "subfilter-2",
+      "displaySubFilterName": "Material"
+    }
+  ]
+}

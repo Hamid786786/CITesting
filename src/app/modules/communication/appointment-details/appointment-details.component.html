@@ -1,0 +1,28 @@
+<!--Appointment Details -->
+<div class="appnt-details-wrapper">
+  <h3>{{'Appointment Details' | translate}} </h3>
+  <div class="appnt-details-content">
+    <h5>{{'When' | translate}}:</h5>
+    <p>{{appointmentDetails['date']|date:"dd/MM/yy"}}</p>
+  </div>
+  <div class="appnt-details-content">
+    <h5>{{'Where' | translate}}:</h5>
+    <p>{{appointmentDetails['destination'] }}</p>
+  </div>
+  <div class="appnt-details-content">
+    <h5>{{'Time' | translate}}:</h5>
+    <p *ngIf="appointmentDetails['startTime']">{{appointmentDetails['startTime']}}-{{appointmentDetails['endTime']}}</p>
+  </div>
+  <div class="appnt-details-content">
+    <h5>{{'Duration' | translate}}:</h5>
+    <p>{{appointmentDetails['duration'] | translate}}</p>
+  </div>
+  <div class="appnt-details-content">
+    <h5>{{'Description' | translate}}:</h5>
+    <p class="box-brdr">{{appointmentDetails['message'] }}</p>
+  </div>
+  <div class="appnt-details-content">
+    <h5>{{'Attendees' | translate}}:</h5>
+    <p>{{appointmentDetails['attendees']}}</p>
+  </div>
+</div>

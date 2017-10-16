@@ -1,0 +1,92 @@
+{
+  "equipmentList2": [
+    {
+      "id": 1,
+      "equipmentNumber": "1212",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 10,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 2,
+      "equipmentNumber": "1313",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 11,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 3,
+      "equipmentNumber": "1414",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 21,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 4,
+      "equipmentNumber": "1515",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 21,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 5,
+      "equipmentNumber": "1616",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 6,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 6,
+      "equipmentNumber": "1717",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 6,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 7,
+      "equipmentNumber": "1818",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 12,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    },
+    {
+      "id": 8,
+      "equipmentNumber": "1919",
+      "description": "Prospecta 2",
+      "maintainancePlant": "Indoor plant",
+      "status": "zzz",
+      "amount": 6,
+      "country": "Bangalore",
+      "intakeDate": 1501672030000,
+      "column": "BBB"
+    }
+  ]
+}

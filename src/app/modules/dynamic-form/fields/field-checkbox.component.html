@@ -1,0 +1,24 @@
+<!-- The required property on the md-checkbox seems to be a prop for the underlying input validation but not for look and feel -->
+<div *ngIf="!field.isReadOnly" [formGroup]="form">
+  <div class="field-container checkbox-spacing" fxLayout="row" fxLayoutWrap>
+    <md-checkbox
+      [disableRipple]="true"
+      [checked]="value"
+      [formControlName]="field.fieldId"
+      (change)="handleChange($event)">
+      <ng-container *ngIf="!field.hideLabel">{{field.label}}<span class="is-required"
+                                                                  *ngIf="field.isMandatory"> *</span></ng-container>
+    </md-checkbox>
+  </div>
+</div>
+
+<div *ngIf="field.isReadOnly">
+  <label *ngIf="!field.hideLabel">{{field.label}}</label>
+  <!--
+      handle the case where checkbox has no value, is it false or Uninitialized
+      md-checkbox has an inderminate state that we might be able to use
+      provide affirmative and negative default values to be used in place of
+      Yes and No for the checkbox so that it is displayed correctly for readonly
+  -->
+  <span>{{form.get(field.fieldId).value ? 'Yes' :  'No'}}</span>
+</div>

@@ -1,0 +1,36 @@
+{
+  "equipmentCreateData": {
+    "createData": [
+      {
+        "moduleId": "12",
+        "description": "Detect",
+        "order": "0"
+      },
+      {
+        "moduleId": "12",
+        "description": "Bill Of Materials",
+        "order": "2"
+      },
+      {
+        "moduleId": "12",
+        "description": "Maintainance Plan",
+        "order": "3"
+      },
+      {
+        "moduleId": "12",
+        "description": "Equipment",
+        "order": "4"
+      },
+      {
+        "moduleId": "12",
+        "description": "Bulk Processing",
+        "order": "5"
+      },
+      {
+        "moduleId": "12",
+        "description": "Sum",
+        "order": "6"
+      }
+    ]
+  }
+}

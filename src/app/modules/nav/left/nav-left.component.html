@@ -1,0 +1,45 @@
+<div [fxFlex]="isExpanded ? '252px' : '53px'" [fxFlex.xs]="isExpanded ? '252px' : '0'"  [fxShow.xs]="isExpanded"  class="sidebar-wrapper">
+    <nav fxLayout="column" fxLayoutAlign="space-between" role="navigation" class="sidebar" [class.expanded]="isExpanded">
+
+        <ul class="sidebar-items shrink-to-scroll">
+            <span class="icon-close" *ngIf="isExpanded" (click)="toggleExpansion()"> <md-icon>clear</md-icon></span>
+            <li *ngFor="let module of currentRolesList" fxLayout="row" #hoverEl>
+                <a [routerLink]="(module.routerUrl!='/dashboard')?'/'+path+module.routerUrl:module.routerUrl" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} (click)="toggleExpansion(module)" (mouseenter)="onMouseEnter(module, hoverEl)" (mouseleave)="onMouseLeave()"
+                    role="button" fxLayout="row">
+                    <span class="item-icon">
+            <i [ngClass]="['icofont', module.icon]"></i>
+
+          </span>
+
+                    <div *ngIf="isExpanded" [@expandedLabel] class="expanded-label" role="button">
+                        {{ module.label |translate}}
+                        <p *ngIf="isExpanded && module.subRole.length>0" class="drop-down">
+                            <md-icon *ngIf="!expandSubMenu">keyboard_arrow_down</md-icon>
+                            <md-icon *ngIf="expandSubMenu">keyboard_arrow_up</md-icon>
+                        </p>
+
+
+                        <ul *ngIf="module.subRole.length>0 && expandSubMenu" class="expanded-sub-menu">
+                            <li *ngFor="let submodule of module.subRole">
+                                <a [routerLink]="(submodule.routerUrl!='/dashboard')?'/'+path+submodule.routerUrl:submodule.routerUrl" routerLinkActive="active" (mouseenter)="onMouseEnter(submodule, hoverEl)" (mouseleave)="onMouseLeave()" (click)="handleClick($event)" role="button">
+                                    <span class="item-icon">
+                            <i [ngClass]="['icofont', submodule.icon]"></i>
+                            <span *ngIf="submodule.label" class="item-badge">
+                              {{ submodule.label | translate}}
+                             </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div #hoverLabel class="hover-label-container">
+        <span *ngIf="!isExpanded && hoveredItem != null" class="hover-label">
+      {{ hoveredItem.label |translate}}
+    </span>
+    </div>
+</div>

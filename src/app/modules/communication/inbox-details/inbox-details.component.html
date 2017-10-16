@@ -1,0 +1,56 @@
+<div class="inbox-details-replay">
+    <div class="replay-header">
+        <div class="replay-header-content">
+
+            <span *ngIf="inboxDetails?.type == 'mail'"><md-icon class="dp-48">mail_outline</md-icon> </span>
+            <span *ngIf="inboxDetails?.type == 'tasks'"><md-icon class="dp-48">build</md-icon> </span>
+            <span *ngIf="inboxDetails?.type == 'chat'"><md-icon class="dp-48">chat</md-icon> </span>
+            <span *ngIf="inboxDetails?.type == 'priority'"><md-icon class="dp-48">priority</md-icon> </span>
+            <span *ngIf="inboxDetails?.type == 'modules'"><md-icon class="dp-48">modules</md-icon> </span>
+
+        </div>
+        <div class="replay-content">
+            <h4>{{'From' | translate}} : {{inboxDetails?.from}}</h4>
+            <p title="{{inboxDetails?.receivedOn|date:'fullDate'}} at {{inboxDetails?.receivedOn |date:'shortTime'}} ">
+                {{inboxDetails?.receivedOn|date:'fullDate'}} {{inboxDetails?.receivedOn |date:'shortTime'}} </p>
+            <h4>{{'To' | translate}} :
+                <span *ngFor="let toUsers of inboxDetails?.to" class="to-names"> {{toUsers}}<span class="separator">,</span> </span>
+
+            </h4>
+        </div>
+        <div class="attach-icon"><span (click)="showDialogPopup('Coming Soon','')"><md-icon md-tooltip= "{{'Add Attachment' | translate}}" >attach_file</md-icon></span>
+            <md-icon *ngIf="!inboxDetails?.priority" [ngStyle]="{ 'color':(inboxDetails?.isPrioritySet)?'red':'grey'}" #priority class="priority{{inboxDetails?.id}}" [hidden]="inboxDetails?.priority" (click)="setPriority(inboxDetails?.id,inboxDetails)">
+                <a class="cursor icon-flag">
+                    <md-icon md-tooltip= "{{'Toggle Priority' | translate}}" >flag</md-icon>
+                </a>
+            </md-icon>
+
+        </div>
+    </div>
+    <div class="replay-action" *ngIf="inboxDetails.type == 'mail'">
+
+        <button class="btn-replay" (click)="callActionsOnClick('Reply')">
+      {{'Reply' | translate}}
+    </button>
+        <button class="btn-replay" (click)="callActionsOnClick('Reply All')">
+      {{'Reply All' | translate}}
+    </button>
+        <button class="btn-replay" (click)="callActionsOnClick('Forward')">
+      {{'Forward' | translate}}
+    </button>
+    </div>
+    <div class="replay-action" *ngIf="inboxDetails.type == 'tasks'">
+
+        <button class="btn-replay" (click)="callActionsOnClick('Approve')">
+      {{'Accept' | translate}}
+    </button>
+        <button class="btn-replay" (click)="callActionsOnClick('Decline')">
+      {{'Decline' | translate}}
+    </button>
+
+    </div>
+    <div class="replay-action-content">
+        <p>{{inboxDetails.greetings}},</p>
+        <p>{{inboxDetails.contentBody}}</p>
+    </div>
+</div>

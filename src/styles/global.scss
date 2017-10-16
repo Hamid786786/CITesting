@@ -1,0 +1,113 @@
+@import './material-color.scss';
+.vd {
+    vertical-align: middle;
+}
+
+.ovr-flw {
+    text-overflow: ellipsis;
+}
+
+.heading2 {
+    font-size: 24px;
+    color: $heading2-color;
+    font-family: $font-stack;
+}
+
+.subheading {
+    font-size: 16px;
+    color: var(--app-primary-color);
+    font-family: $font-stack;
+}
+
+p {
+    font-size: 13px;
+    color: $heading2-color;
+    font-family: $font-stack;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+snack-bar-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    min-width: 450px !important;
+    max-width: 450px !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.error-text {
+    color: $color-error;
+}
+
+.mat-icon.icon-act {
+    opacity: 1 !important;
+}
+.mat-expansion-panel-body{
+    border-top: 1px solid $border-gray-light;
+       p{
+        font-size: 14px;
+        }
+}
+app-equipment-graph, .map-container {
+    .btn-more {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        bottom: 25px;
+        position: absolute;
+        right: -55px;
+        margin: 0;
+        padding: 0;
+        .mat-icon {
+            width: auto;
+            height: auto;
+            font-size: 43px;
+        }
+    }
+}
+ .component-serach{
+      app-search, .filter-box{
+        .mat-input-wrapper{
+            max-width: 140px;
+            .mat-icon{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .mat-input-infix {
+            padding: 0;
+            border-top: 0;
+        }
+        .mat-input-placeholder{color: $gray-color; margin-top: -5px;}
+    }
+}
+.mat-expansion-panel-body{
+  border-top: 1px solid $border-gray-light;
+  p{
+    font-size: 14px;
+  }
+}
+app-equipment-graph, .map-container{
+  .btn-more {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    bottom: 25px;
+    position: absolute;
+    right: -55px;
+    margin: 0;
+    padding: 0;
+    .mat-icon{
+      width: auto;
+      height: auto;
+      font-size: 43px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<!--
+  Need to set `required` state manually on input because it does not work well with
+      https://github.com/angular/material2/issues/116
+-->
+<div [formGroup]="form" *ngIf="!field.isReadOnly">
+  <md-input-container *ngIf="!field.hideLabel" [formGroup]="form">
+      <textarea
+        mdInput
+        [required]="field.isMandatory"
+        [formControlName]="field.fieldId"
+        [placeholder]="field.helpText || field.label"
+        [rows]="field.rows"
+      ></textarea>
+  </md-input-container>
+  <md-input-container *ngIf="field.hideLabel" [formGroup]="form" floatPlaceholder="never">
+    <textarea mdInput [required]="field.isMandatory" [formControlName]="field.fieldId" [rows]="field.rows"
+              [style.height]="field.settings.areaHeight"></textarea>
+  </md-input-container>
+</div>
+<div *ngIf="field.isReadOnly">
+  <label *ngIf="!field.hideLabel">{{field.label}}</label>
+  <span>{{form.get(field.fieldId).value}}</span>
+</div>

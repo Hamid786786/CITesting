@@ -1,0 +1,125 @@
+@import 'src/styles/material-color.scss';
+.equipment-modal {
+.mat-dialog-container {
+    width: 785px ;
+    height: 390px;
+    border: 2px solid #777;
+    .dialog-box {
+      height: 100% !important;
+      width: 100% !important;
+      position: relative;
+      text-align: right;
+      .mat-dialog-content {
+        margin: 0;
+        padding: 0 10px;
+        min-height: 260px;
+        pl-carousel{
+          height: calc(100% - 35%);
+          width: calc(100% - 5%);
+        }
+      }
+     .btn-close {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        cursor: pointer;
+        margin: 10px;
+        padding: 0;
+      } 
+      h1 {
+        color: $gray-color;
+        font-size: 29px;
+        margin: 0px auto;
+        width: calc(100% - 25%);
+        text-align: center;
+        font-weight: 300;
+      }
+      .icon {
+        cursor: pointer;
+        display: block;
+        margin: 0px;
+        text-align: right;
+        .mat-icon {
+          color: var(--app-secondary-color);
+        }
+      }
+      .reports-widget-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        .reports-widget {
+          display: flex;
+          flex: 1 0 auto;
+          flex-direction: column;
+          margin-right: 60px;
+          h3 {
+            font-size: 11px;
+            font-weight: 500;
+            margin: 0 0 5px;
+            padding: 0;
+            text-align: left;
+            color: var(--app-secondary-color);
+          }
+          .box {
+            background: rgba(0, 0, 0, 0) url("/assets/img/dashboard-reports.png") no-repeat scroll 0 0;
+            border-radius: 4px;
+            box-shadow: 1px 1px 2px 1px $box-shadow;
+            display: flex;
+            flex: 1 1 100%;
+            min-height: 165px;
+          }
+        }
+        .reports-widget:first-child {
+          margin-left: 60px;
+        }
+      }
+      /*reports-widget-wrapper Emds */
+      .mat-dialog-actions {
+        margin: 0  !important;
+        padding: 0;
+        position: absolute;
+        bottom:0px;
+        right: 10px;
+        .mat-button {
+          background: $bg-white;
+          margin: 0 0 20px;
+          border: 1px solid $gray-color;
+          font-weight: 300;
+          min-width: 98px;
+          font-family: $font-stack;
+        }
+        .mat-button > span {
+          color: var(--app-secondary-color);
+        }
+        a {
+          text-decoration: none;
+          color: var(--app-secondary-color);
+          margin: 10px 15px;
+        }
+        .mat-button.btn-trans, .mat-button.btn-trans:hover, .mat-button.btn-trans:focus{
+          background: transparent;
+          border: 0;
+        }
+      }
+
+    }
+    /*dialog-box Emds */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .equipment-modal {
+    .mat-dialog-container {
+      .dialog-box {
+        .mat-dialog-content {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-height: 418px) {
+  .equipment-modal .mat-dialog-container {
+    height: 310px !important;
+  }
+}

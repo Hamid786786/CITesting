@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <button md-dialog-close class="btn-close"><span class="icon"> <md-icon>clear</md-icon> </span></button>
+  <div class="text-editor-widget">
+    <quill-editor #editor formControlName="editor" (onEditorCreated)="setFocus($event)"></quill-editor>
+  </div>
+  <div class="footer-section">
+    <button type="submit" class="btn btn-submt">{{'Submit' | translate}}</button>
+  </div>
+</form>

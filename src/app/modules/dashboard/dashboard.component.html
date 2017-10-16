@@ -1,0 +1,19 @@
+ <div class="content-withmenu-wrapper">
+    <div class="content">
+      <md-card class="content-left-space">
+        <md-card-header class="header-wrapper"  fxLayout fxLayout.xs="column" fxLayoutAlign="flex-start" fxLayoutGap="10px"
+          fxLayoutGap.xs="5px" fxLayout.sm="column">
+            <div class="welcome-text">
+              <div class="welcome-text-cnt">
+                <md-card-title>{{ 'Welcome' | translate }} {{this.currentUserDetail.fname}}</md-card-title>
+                <md-card-subtitle>{{ 'Lets get started...' | translate }}</md-card-subtitle>
+              </div>
+              <app-create></app-create>
+            </div>
+        </md-card-header>
+        <div class="widget-list">
+        <router-outlet></router-outlet>
+        </div>
+    </md-card>
+  </div>
+</div>

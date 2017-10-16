@@ -1,0 +1,135 @@
+@import 'src/styles/material-color.scss';
+
+.dashbrd-modal {
+  .mat-dialog-container {
+    max-height: 415px;
+    border: 2px solid #777;
+    .dialog-box {
+      height: 100% !important;
+      width: 100% !important;
+      text-align: right;
+      .mat-dialog-content {
+        margin: 0;
+        padding: 0 10px;
+        max-height: 100%;
+        height: 100%;
+        overflow: visible;       
+      }
+     .btn-close {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+      } 
+      h1 {
+        color: $gray-color;
+        font-size: 29px;
+        margin: 10px auto 17px;
+        width: calc(100% - 13%);
+        text-align: center;
+        font-weight: 300;
+      }
+      .icon {
+        cursor: pointer;
+        display: block;
+        margin: 8px;
+        text-align: right;
+        .mat-icon {
+          color: var(--app-secondary-color);
+        }
+      }
+      .reports-widget-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        .reports-widget {
+          display: flex;
+          flex: 0 0 22%;
+          flex-direction: column;
+          margin:5px 70px 0 0;
+          max-width: 22%;
+          h3 {
+            font-size: 11px;
+            font-weight: 500;
+            margin: 0 0 5px;
+            padding: 0;
+            text-align: left;
+            color: var(--app-secondary-color);
+          }
+          .box {
+            //background: rgba(0, 0, 0, 0) url("/assets/img/dashboard-reports.png") no-repeat scroll 0 0;
+            border-radius: 4px;
+            box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.3);
+           -webkit-box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.3);
+           -moz-box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex: 1 1 100%;
+            min-height: 165px;
+            max-height: 165px;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;            
+            border: 1px solid transparent;
+            overflow: hidden;
+            img{
+              max-width: 100%;
+            }
+            pl-carousel{
+               height: calc(100% - 10px);
+              width: calc(100% - 10px);
+            }
+            app-audio{
+              margin: auto;
+              width: 100%;
+              audio{
+                vertical-align: middle;
+                width: 100%;
+              }
+            }
+            app-video{
+              margin: auto;
+              video{
+                width: 100%;
+                vertical-align: middle;
+                //height: 160px;
+              }
+            }
+            
+          }
+          .box:hover, .box-active{
+            box-shadow: 1px 1px 6px 0 var(--app-primary-color);
+            border: 1px solid var(--app-primary-color);
+          }
+        }
+        .reports-widget:last-child {
+          margin-right: 0px;
+        }
+      }
+      /*reports-widget-wrapper Emds */
+      .mat-dialog-actions {
+        justify-content: flex-end;
+        margin: 0 25px !important;
+        padding: 0;
+        .mat-button {
+          background: $bg-white;
+          margin: 0 0 20px;
+          border: 1px solid $gray-color;
+          font-weight: 300;
+          min-width: 98px;
+        }
+        .mat-button > span {
+          color: var(--app-secondary-color);
+        }
+        a {
+          text-decoration: none;
+          color: var(--app-secondary-color);
+          margin: 10px 15px;
+        }
+      }
+
+    }
+    /*dialog-box Emds */
+  }
+}

@@ -1,0 +1,54 @@
+<ng-container *ngIf="gridActions.enableAddRow">
+  <button md-button>
+    <md-icon>add</md-icon>
+    Add Row
+  </button>
+</ng-container>
+
+<ng-container *ngIf="gridActions.enableImport">
+  <button md-button>
+    <md-icon>unarchive</md-icon>
+    Import
+  </button>
+</ng-container>
+
+<ng-container *ngIf="gridActions.enableExport">
+  <button md-button>
+    <md-icon>archive</md-icon>
+    Export
+  </button>
+</ng-container>
+
+<table class="table" [formGroup]="form">
+  <thead>
+  <tr>
+    <th> Action</th>
+    <th *ngFor="let header of headers">{{header}}</th>
+  </tr>
+  <!-- Create a subheader to express grid level actions -->
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of rows">
+    <td>
+      <ng-container *ngIf="row.actions.enableCopyRow">
+        <button md-mini-fab>
+          <md-icon>queue</md-icon>
+        </button>
+      </ng-container>
+      <ng-container *ngIf="row.actions.enableFormView">
+        <button md-mini-fab>
+          <md-icon>create</md-icon>
+        </button>
+      </ng-container>
+      <ng-container *ngIf="row.actions.enableDelRow">
+        <button md-mini-fab>
+          <md-icon>remove</md-icon>
+        </button>
+      </ng-container>
+    </td>
+    <td *ngFor="let field of row.fields">
+      <pl-form-field [field]="field" [form]="form"></pl-form-field>
+    </td>
+  </tr>
+  </tbody>
+</table>

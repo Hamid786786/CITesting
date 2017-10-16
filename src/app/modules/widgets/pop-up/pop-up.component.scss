@@ -1,0 +1,49 @@
+.widgets-modal{
+  .mat-dialog-container{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+      .dialog-box {
+        height:100% !important;
+        width: 100% !important;
+      .btn-close {
+          background: transparent none repeat scroll 0 0;
+          border: 0 none;
+          cursor: pointer;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: 10px;
+          color: var(--app-primary-color);
+          top: 5px;
+        }
+        .mat-dialog-content{
+          height: 100%;
+          max-height: 100%;
+          margin-top: 35px;
+          .dashbrd-widget .widgets-wrapper .widget-box .icon md-icon {vertical-align: top;  }
+        .carousel-wrapper {
+              margin: 0 10px;
+              max-width: 100%;
+              width: 99%;
+          }
+          app-video{
+            width: 100%;
+          video {
+              height: 90%;
+              width: 98%;
+          }
+        }
+        }
+        .box {
+          border-radius: 4px;
+          box-shadow: 1px 1px 2px 1px;
+          display: flex;
+          flex: 1 1 100%;
+          min-height: 165px;
+          left: 0 !important;
+          top: 0 !important;
+        }
+      }
+  }
+}

@@ -1,0 +1,38 @@
+<!-- primary content -->
+<div class="content-withmenu-wrapper">
+    <div class="content" [style.gt-sm]="{'left': '0px'}" [style.xs]="{'left': '0px'}" [style.sm]="{'left': '0px'}">
+        <md-card class="content-left-space">
+            <md-card-header class="header-wrapper">
+                <div class="welcome-text">
+                    <div class="welcome-text-cnt">
+                        <md-card-title>{{ 'Welcome' | translate }} {{this.currentUserDetail.username}}</md-card-title>
+                        <md-card-subtitle>{{ 'Your universal communications center' | translate }}</md-card-subtitle>
+                    </div>
+                    <app-create></app-create>
+                </div>
+            </md-card-header>
+            <md-card-content class="container-comu" fxLayout fxLayout.xs="column" fxLayoutAlign="flex-start">
+                <div class="item item-1" *ngIf="appList" [ngClass]="{'mbl-visible' : appList}">
+                    <div class="calender-view">
+                        <app-appointments (getDetailOnClick)="getDetailAppointmentRes($event)"></app-appointments>
+                    </div>
+                </div>
+                <div class="item item-2" *ngIf="inboxList">                    
+                        <app-inbox (getDetail)="getDetailInbox($event)" (getDetailOnClick)="getDetailInboxRes($event)">
+                        </app-inbox>
+                </div>
+                <div class="item item-3" [ngClass]="{'mbl-hidden' : !inboxDetails , 'mbl-visible' : inboxDetails}">
+                    <div class="detail-view">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+            </md-card-content>
+        </md-card>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="sm-btn" *ngIf="inboxList || appList">
+        <a href="javascript:void(0);" (click)="showInbox()" [ngClass]="{'active-list' : inboxList }">Inbox</a>
+        <a href="javascript:void(0);" (click)="showCalender()" [ngClass]="{'active-list' : appList }">Calender</a>
+    </div>
+</div>

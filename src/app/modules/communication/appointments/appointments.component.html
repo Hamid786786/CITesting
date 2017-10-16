@@ -1,0 +1,19 @@
+<div class="calender-widget">
+  <h3 class="header">{{'Calendar' | translate}}</h3>
+  <md-input-container class="date-component">
+    <input mdInput
+           [ngModel]="myDate"
+           [mdDatepicker]="picker" placeholder="{{'Choose Appointment date' | translate}}" disabled>
+    <button md-tooltip= "{{'Open Calendar' | translate}}" mdSuffix [mdDatepickerToggle]="picker"></button>
+  </md-input-container>
+  <md-datepicker #picker (selectedChanged)="selectedDateChange($event)" id="datepickercal"></md-datepicker>
+
+  <div class="cal-view-widget" loadMoreData (scrolledToBottom)="onClickScroll()" id="custom-scroll">
+      <div *ngFor="let appointment of _appointments" class="cal-view-details">
+        <h3 (click)="getAppointmentDetails(appointment.id)">{{'Appointment' | translate}} </h3>
+        <h4>{{appointment.date| date:"dd/MM/yy"}}</h4>
+        <p *ngIf="appointment.startTime">{{appointment.startTime}} - {{appointment.endTime}}</p>
+        <p>{{appointment.message}}</p>
+      </div>
+  </div>
+</div>

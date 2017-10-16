@@ -1,0 +1,93 @@
+{
+  "EquipmentSearch": [
+    {
+      "module": "equipment",
+      "result": [
+        {
+          "recordNumber": "1",
+          "moduleId": 1,
+          "title": "equipment-1",
+          "description": "Description of equipment-1",
+          "owner": "saqib",
+          "plantCode": "111"
+        },
+        {
+          "recordNumber": "2",
+          "moduleId": 1,
+          "title": "equipment-2",
+          "description": "Description of equipment-2",
+          "sender ": "111",
+          "receiver": "11"
+        },
+        {
+          "recordNumber": "3",
+          "moduleId": 1,
+          "title": "equipment-3",
+          "description": "Description of equipment-3",
+          "owner": "saqib",
+          "plantCode": "111"
+        },
+        {
+          "recordNumber": "4",
+          "moduleId": 1,
+          "title": "equipment-4",
+          "description": "Description of equipment-4",
+          "owner": "saqib",
+          "plantCode": "111"
+        },
+        {
+          "recordNumber": "5",
+          "moduleId": 1,
+          "title": "equipment-5",
+          "description": "Description of equipment-5",
+          "owner": "saqib",
+          "plantCode": "111"
+        },
+        {
+          "recordNumber": "6",
+          "moduleId": 1,
+          "title": "equipment-6",
+          "description": "Description of equipment-6",
+          "owner": "saqib",
+          "plantCode": "111"
+        },
+        {
+          "recordNumber": "7",
+          "moduleId": 1,
+          "title": "equipment-7",
+          "description": "Description of equipment-7",
+          "owner": "saqib",
+          "plantCode": "111"
+        },
+        {
+          "recordNumber": "8",
+          "moduleId": 1,
+          "title": "equipment-8",
+          "description": "Description of equipment-8",
+          "owner": "saqib",
+          "plantCode": "111"
+        }
+      ]
+    },
+    {
+      "module": "material",
+      "result": [
+        {
+          "recordNumber": "5",
+          "moduleId": 1,
+          "title": "material-1",
+          "description": "Description of material-1",
+          "owner": "amit",
+          "plantCode": "1112"
+        },
+        {
+          "recordNumber": "6",
+          "moduleId": 1,
+          "title": "material-2",
+          "description": "Description of material-2",
+          "helpdesk": "111"
+        }
+      ]
+    }
+  ]
+}

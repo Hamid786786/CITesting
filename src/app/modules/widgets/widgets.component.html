@@ -1,0 +1,54 @@
+<div class="main-content">
+  <gridster [options]="gridsterOptions" [draggableOptions]="gridsterDraggableOptions" #gridster1 style="min-height:500px; margin-bottom:80px;">
+    <gridster-item class="row" *ngFor="let widget of widgets; let indx = index" #itemComp
+                   [options]="itemOptions"
+                   [dragAndDrop]="widget.dragAndDrop" [resizable]="widget.resizable"
+                   [(x)]="widget.x" [(y)]="widget.y"
+                   [(w)]="widget.w" [(h)]="widget.h"
+                   [(xSm)]="widget.xSm" [(ySm)]="widget.ySm"
+                   [(xMd)]="widget.xMd" [(yMd)]="widget.yMd"
+                   [(xLg)]="widget.xLg" [(yLg)]="widget.yLg"
+                   [(xXl)]="widget.xXl" [(yXl)]="widget.yXl"
+                   (change)="itemChange($event)"
+                   [ngClass]="{'widget-inbox-view':(widget.type === 'inbox')}">
+
+      <div class="panel-headings panel-heading" *ngIf="widget.title!= ''" >
+        <h5 class="panel-title">{{ widget.title }}</h5>
+      </div>
+
+      <div class="panel-body" style="top: 30px !important;">
+        <div class="panel-widget">
+        <ng-container *ngIf="widget.type === 'iframe'">
+          <pl-iframe [url]="widget.content.url"></pl-iframe>
+        </ng-container>
+        <ng-container *ngIf="widget.type === 'carousel'">
+          <pl-carousel [slides]="widget.content.slides"></pl-carousel>
+        </ng-container>
+        <ng-container *ngIf="widget.type === 'inbox'">
+          <app-inbox (getDetailOnClick)="getDetailInbox($event)"></app-inbox>
+        </ng-container>
+        <ng-container *ngIf="widget.type === 'video'">
+          <app-video [src]="widget.content.src"></app-video>
+        </ng-container>
+        <ng-container *ngIf="widget.type === 'audio'">
+          <app-audio [src]="widget.content.src"></app-audio>
+        </ng-container>
+        <ng-container *ngIf="widget.type === 'image'">
+          <div [ngStyle]="{'background-image': 'url(' + widget.content.src + ')'}" class="widget-pic"></div>
+        </ng-container>
+        <ng-container *ngIf="widget.type === 'create-widget'">
+          <create-widget></create-widget>
+        </ng-container>
+        </div>
+        <div class="hover-btn">
+        <span class="icon-links" *ngIf="widget.type!=='inbox'">
+          <md-icon md-tooltip= "{{'Click to Delete' | translate}}" *ngIf="widget.type!=='create-widget'" (click)="remove(widget)">delete</md-icon>
+          <md-icon md-tooltip= "{{'Click to View Full Screen' | translate}}" (click)="showDialogPopupGraph(widget)" *ngIf="widget.type!=='create-widget'">open_with</md-icon>
+        </span>
+        </div>
+      </div>
+
+    </gridster-item>
+  </gridster>
+
+</div>

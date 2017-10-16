@@ -1,0 +1,58 @@
+{
+    "getModule":[
+        {
+          "module" : "equipment",
+          "moduleId": 1,
+          "header" : {
+              "moduleHeaderList": "Maintenance - Equipment List",
+              "moduleHeaderMap": "Maintenance - Equipment Map",
+              "moduleHeaderGraph": "Maintenance - Equipment Graph"              
+              
+          },
+          "slides": [
+            {
+              "description": "Welcome to the Maintenance - Equipment List Module. Let's take you through a quick tour to help you get the most out of this module",
+              "url": "",
+              "state": "current"
+            },
+            {
+              "description": "Dummy 2",
+              "url": "assets/img/carousel2.jpg",
+              "state": "right"
+            },
+            {
+              "description": "Dummy 3",
+              "url": "assets/img/carousel3.jpg",
+              "state": "right"
+            }
+          ]
+        },
+        {
+          "module": "product",
+          "moduleId": 2,
+          "header" : 
+            {
+              "moduleHeaderList": "Maintenance - Product List",
+              "moduleHeaderMap": "Maintenance - Product Map",
+              "moduleHeaderGraph": "Maintenance - Product Graph"              
+            },
+            "slides": [
+              {
+                "description": "Welcome to the Maintenance - Product List Module. Let's take you through a quick tour to help you get the most out of this module",
+                "url": "",
+                "state": "current"
+              },
+              {
+                "description": "Dummy 2",
+                "url": "assets/img/carousel2.jpg",
+                "state": "right"
+              },
+              {
+                "description": "Dummy 3",
+                "url": "assets/img/carousel3.jpg",
+                "state": "right"
+              }
+            ]
+        }    
+      ]
+}

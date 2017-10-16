@@ -1,0 +1,20 @@
+/* Dimmed backdrop of modal */
+.pl-modal-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.pl-dialog-mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-body {
+  max-height: 500px;
+  overflow: scroll;
+}

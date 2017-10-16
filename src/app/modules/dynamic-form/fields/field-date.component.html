@@ -1,0 +1,20 @@
+<div [formGroup]="form" *ngIf="!field.isReadOnly">
+  <label *ngIf="!field.hideLabel">
+    {{field.label}}
+    <span *ngIf="field.isMandatory"> *</span>
+  </label>
+  <input
+    (change)="onDateChange($event)"
+    mdInput type="date"
+    [formControlName]="field.fieldId"
+  />
+</div>
+
+<div *ngIf="field.isReadOnly">
+  <label *ngIf="!field.hideLabel">{{field.label}}</label>
+  <!--
+    Date should not be in ISO format and normalize date format to be the same when in read only and editable modes
+    needs improvement, determine the format using metadata
+   -->
+  <span class="read-only">{{form.get(field.fieldId).value | date: 'dd/MM/yyyy'}}</span>
+</div>

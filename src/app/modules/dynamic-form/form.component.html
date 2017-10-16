@@ -1,0 +1,19 @@
+<!-- If it renders without a formGroup, it will throw an error requiring a valid formGroup-->
+<ng-container *ngIf="form">
+  <div class="container">
+    <form [formGroup]="form.formGroup" (ngSubmit)="onSubmit($event)">
+      <legend> {{'Title' | translate}}</legend>
+      <div *ngFor="let tab of form.tabs">
+        <pl-form-tab [name]="tab.label">
+          <ng-container *ngFor="let field of tab.fields">
+            <pl-form-field [field]="field" [form]="form.formGroup"></pl-form-field>
+          </ng-container>
+        </pl-form-tab>
+      </div>
+      <button [style.marginLeft]="'50%'" md-button type="submit">{{'Submit' | translate}}</button>
+    </form>
+    <pre class="form-data" *ngIf="form && form.formGroup">
+      {{form.formGroup.value | json}}
+    </pre>
+  </div>
+</ng-container>

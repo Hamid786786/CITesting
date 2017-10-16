@@ -1,0 +1,19 @@
+
+<button *ngIf="enableView" (click)="viewMore()" class="btn-more"><md-icon md-tooltip= "{{'Click To Load More' | translate}}" mdTooltipClass="load_more">arrow_drop_down_circle</md-icon></button>
+<md-card class="new-cont" loadMoreData id="custom-scroll">
+    <md-card-content class="graph-container" >
+        <div class="graph-l" *ngFor="let graph of equipmentsGraphs;let i=index">
+            <h3>{{graph.title}} </h3>
+            <div class="box" *ngIf="graph.type === 'graph'" (click)="selectItem(i)">
+                <ng-container>
+                    <div [ngStyle]="{'background-image': 'url(' + graph.content.url + ')'}" class="widget-pic"></div> 
+                </ng-container>
+            </div>
+            <div class="icon-widget">
+                <span (click)="showDialogPopupGraph(graph.content.url)"> <md-icon md-tooltip= "{{'Click To Open With Full Screen' | translate}}">open_with</md-icon> </span>
+                <span> <md-icon md-tooltip= "{{'Click To Download' | translate}}">file_download</md-icon> </span>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>
+<span class="icon-chat"><md-icon>chat_bubble_outline</md-icon></span>

@@ -1,0 +1,274 @@
+@import '../nav';
+@import 'src/styles/material-color.scss';
+
+.sidebar-wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: $bg-white;
+  -webkit-box-shadow: 3px 0px 10px -2px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 3px 0px 10px -2px rgba(0, 0, 0, 0.33);
+  box-shadow: 3px 0px 10px -2px rgba(0, 0, 0, 0.33);
+  transition: all .2s;
+  z-index: 9992;
+  border-right-color: var(--app-secondary-color);
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.sidebar {
+  position: relative;
+  width: 53px;
+
+  ul {
+    width: 53px;
+    transition: width .2s;
+    border-top: 2px solid #bbb;
+  }
+
+  > ul.shrink-to-scroll {
+    border-top: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.sidebar.expanded {
+  border-right: 1px solid $item-border-color;
+
+  > ul {
+    width: 250px;
+
+    > li {
+      > a {
+        flex: 1 1 0%;
+      }
+    }
+  }
+}
+ul.sidebar-items.shrink-to-scroll{overflow: visible;}
+ul.sidebar-items {
+  white-space: normal;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0 !important;
+  position: relative;
+  overflow: visible !important;
+  height: 100%;
+
+  span.icon-close {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    .mat-icon {
+      color: var(--app-secondary-color);
+      font-size: 20px;
+    }
+  }
+  > li {
+    position: relative;
+    white-space: nowrap;
+    list-style-type: none;
+
+    > a {
+      display: block;
+      position: relative;
+      text-decoration: none;
+
+      > .item-icon {
+        display: flex;
+        position: relative;
+        z-index: 1; // so animated label slides below the icon
+        align-self: flex-start;
+
+        > i {
+          font-size: 25px;
+          border-top: 1px solid transparent;
+          border-bottom: 1px solid $item-border-color;
+          color: #ccc;
+          background-color: #fff;
+          padding: 8px 12px;
+          border-left: 3px solid transparent;
+          // border-right: 1px solid $item-border-color;
+        }
+
+        > .item-badge {
+          display: inline-block;
+          position: absolute;
+          top: 10px;
+          right: 2px;
+          z-index: 2;
+          white-space: nowrap;
+          text-align: center;
+          font-size: 0.75em;
+          color: #fff;
+          background-color: red;
+          border-radius: 8px;
+          padding: 0 5px;
+        }
+      }
+    }
+
+    > a.active {
+      //color: var(--app-primary-color);
+       color: #fff;
+      .item-icon > i {
+        border-left: 3px solid var(--app-primary-color);
+       // padding-left: 0.3em;
+       //font-size: 31px;
+        color: var(--app-primay-color);    
+        background-color: var(--app-secondary-color);    
+      }
+
+      > .expanded-label {
+        color: var(--app-secondary-color);
+      }
+    }
+
+    > a:hover,
+    > a:focus {
+      //background-color: var(--app-tertiary-color);
+      z-index: 1001;
+      
+      .item-icon > i {
+        /*border-top-color: var(--app-primary-color);
+                border-bottom-color: var(--app-primary-color);*/
+        color: var(--app-primary-color);
+        background-color: var(--app-tertiary-color);
+      }
+
+      > .expanded-label {
+        color: var(--app-secondary-color);
+        // border-left: 1px solid var(--app-primary-color);
+        //border-left-color: $color-blue-text;
+        //border-left-style: solid;
+        //border-left-width: 2px;
+      }
+    }
+  }
+
+  .expanded-label {
+    color: var(--app-secondary-color);
+    padding-left: 5px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+    font-family: $font-stack;
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    line-height: 40px;
+  }
+ /* .expanded-label:hover{
+   background-color: #fff;
+   color: var(--app-primary-color);
+  }*/
+  .drop-down {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: auto;
+    line-height: 60px;
+    margin: 0;
+    .mat-icon{
+       color: var(--app-secondary-color);
+    }
+  }
+}
+
+.expanded-sub-menu {
+  background: $bg-light-gray;
+  border: 0 !important;
+  width: 196px !important;
+  padding: 10px 0;
+  margin: 5px 0 0 -4px;
+  flex: 1 0 auto;
+  > li {
+    list-style: none;
+    a {
+      font-size: 13px;
+      line-height: 30px;
+      padding-left: 10px;
+      text-decoration: none;
+      display: block;
+      color: var(--app-secondary-color);
+      span {
+        .icofont.icofont-list {
+          border: 0 !important
+        }
+      }
+    }
+    > a:hover,
+    > a:focus {
+      background-color: var(--app-tertiary-color);
+      z-index: 1001;
+      color: #fff;
+
+      .item-icon > i {
+        /*border-top-color: var(--app-primary-color);
+                  border-bottom-color: var(--app-primary-color);*/
+         color: #fff;
+        background-color: transparent;
+      }
+    }
+  }
+  a:hover{
+    background-color: #fff;
+    .icofont{
+      color: var(--app-primary-color);
+    }
+  }
+}
+
+// Popout label on item hover
+.hover-label-container {
+  position: absolute;
+  left: 50px;
+
+  > .hover-label {
+    white-space: nowrap;
+    position: relative;
+    height: 41px;
+    color: var(--app-secondary-color);
+    padding: 0 0.8em;
+    border-width: 1px;
+    border-color: var(--app-secondary-color);
+    border-style: solid;
+   // border: 1px solid #ccc;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    //background-color: $tool-tip-bg-color;
+    background-color: #fff;
+    z-index: 1002; // so label appears above item icon
+    top: 0px;
+
+    // No equivalent in Angular flexbox, so it's here instead
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    font-family: $font-stack;
+  }
+
+  // Indented callout effect for popout
+  > .hover-label::before {
+    position: absolute;
+    top: 40%;
+    left: -0.05em;
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    border-style: solid;
+    border-color: inherit transparent;
+    border-width: 0 0 1px 1px;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    background-color: inherit;
+  }
+}

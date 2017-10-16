@@ -1,0 +1,67 @@
+@import 'src/styles/material-color.scss';
+quill-editor {
+  display: block;
+}
+/*.ng-invalid {
+  border: 1px dashed red;
+}*/
+.email-signature-modal{
+    .mat-dialog-container {
+      min-height: 265px;
+      border: 2px solid $gray-color;
+      max-height: 300px;
+      overflow-y: scroll !important;
+      width: 50vw;
+      touch-action: pan-y;
+
+        h1.mat-dialog-title{
+          font-size: 20px;
+          color: $gray-color;
+          margin: -8px 0 10px;
+          text-align: left;
+          padding: 0;
+          font-family: $font-stack;
+        }
+      .btn-close {
+          color: var(--app-primary-color);
+          width: 100%;
+          margin: 0;
+          text-align: right;
+          margin: 10px;
+      }
+      .footer-section {
+          margin: 15px 0 20px 0;
+          display: flex;
+          justify-content: flex-end;
+      .btn{
+        border-radius: 3px;
+      }
+      .btn-submt {
+          background: $bg-white;
+          height: 30px;
+          border: 2px solid #d1d1d1;
+          font-size: 14px;
+          color: var(--app-primary-color);
+          font-family: $font-stack;
+          padding: 0;
+          min-width: 95px;
+      }
+      .btn-clear {
+          background: var(--app-text-color);
+          height: 30px;
+          border: 0;
+          font-size: 14px;
+          color: var(--app-primary-color);
+          font-family: $font-stack;
+          min-width: 50px;
+          padding: 0;
+          margin-right: 12px;
+      }
+        .btn-submt:hover {
+          background: var(--app-primary-color);
+          color: var(--app-text-color);
+          border: 2px solid var(--app-primary-color);
+        }
+      }
+    }
+}

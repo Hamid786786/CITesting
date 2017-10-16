@@ -1,0 +1,220 @@
+
+<!-- primary content -->
+<div class="content-withmenu-wrapper">
+    <div class="content" [style.gt-sm]="{'left': '0px'}" [style.xs]="{'left': '0px'}" [style.sm]="{'left': '0px'}">
+        <div class="dyn-module-subcomponent dyn-module-sm">
+            <md-card>
+                <md-card-header>
+                <md-card-title><i class="icofont icofont-tools-alt-2"></i> {{'Maintenance - Equipment List: Equipment 1234 - XXXX' | translate }} {{componentName | translate}} </md-card-title>
+                </md-card-header>
+                <md-card-content>
+                    <div class="list-box">
+                        <div class="list-l">
+                            <div class="box">
+                                    <div class="box-info">
+                                        <div class="img-widget">
+
+                                        </div>
+                                        <div class="box-content">
+                                            <h3>{{'Equipment 1234 - XXXX' | translate}}</h3>
+                                            <md-list>
+                                                <md-list-item>
+                                                    <div class="item-l">
+                                                        <h4 md-line>{{'Attribute one' | translate}}</h4>
+                                                        <h4 md-line>{{'Attribute two' | translate}}</h4>
+                                                    </div>
+                                                    <div class="item-r">
+                                                        <h4 md-line> {{'Attribute three' | translate}} </h4>
+                                                        <h4 md-line>{{'Attribute four' | translate}}</h4>
+                                                    </div>
+                                                </md-list-item>
+                                            </md-list>
+                                            <span class="icon-group">
+                                                <md-icon>delete</md-icon>
+                                                <md-icon>edit</md-icon>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="box-footer ">
+                                        <a [routerLink]="">View Logs</a>
+                                        <a [routerLink]="">More Details</a>
+                                    </div>
+                            </div>
+                                <div class="component-serach">
+                        <h3>{{'Sub Components' | translate}}</h3>
+                        <app-search [iconClass]="false" [spanIcon]="false" [placeHolderText]= "translatedPHText" [searchUrl]=searchUrl [filter]="''" [clearModel]="true" [classText]="'search'" [onEnterEvent]="false" (selectCallback)="redirectSearch($event)">
+                        </app-search>
+                        <div class="filter-box">
+                            <md-input-container class="filter">
+                                <input mdInput type="text" placeholder="{{'Filter By'|translate}}:" autocomplete="off">
+                                <md-icon>keyboard_arrow_down</md-icon>
+                            </md-input-container>
+                        </div>
+                    </div>
+                                <div class="component-box-wrapper">
+                <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                 <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                 <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                 <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                 <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+                 <md-card>
+                    <md-card-content>
+                        <md-card-title>
+                            {{'Component1' | translate}}
+                        </md-card-title>
+                        <p>{{'Attribute one' | translate}}</p>
+                        <p>{{'Attribute two' | translate}}</p>
+                        <p>{{'Attribute three' | translate}}</p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <a href="javascript:void(0);">select</a>
+                    </md-card-actions>
+                </md-card>
+            </div>
+                        </div>
+                        <div class="list-more-icon">
+                            <md-icon>arrow_drop_down_circle</md-icon>
+                        </div>
+                        <div class="list-r">
+                            <div class="export-link">
+                                <a href="javascript:void();">{{'Export'|translate}} </a>
+                            </div>
+                            <div class="btn-create">
+                                <button>{{'Create' | translate}} <span class="add-icon"> <md-icon>add</md-icon></span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div> <!-- list-box ends -->
+
+                </md-card-content>
+            </md-card>
+
+       </div>
+    </div>
+</div>

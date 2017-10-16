@@ -1,0 +1,386 @@
+/* This file will be extracted to main dist folder and is imported in index.html */
+/* This file is for setting global styles  */
+/* Material Color Override with dynamic variables */
+/*quill css*/
+@import './quill.snow.css';
+@import './material-color.scss';
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  font-family: $font-stack;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.428571429;
+}
+
+// Setup Global CSS Variables
+:root {
+  // Application Color Palette
+  --app-primary-color: #009ce2; //#008905 Primary color of clickables like buttons, accents, links etc.
+  --app-secondary-color: #55bbff; //#42e048 Hover to primary
+  --app-tertiary-color: #e5e5e5;
+  --app-primary-bg-color: #ffffff;
+  --app-secondary-bg-color: #fafafa;
+  --app-tertiary-bg-color: #f8f8f8;
+  --app-text-color: #ffffff; // Text color over primary color
+  --app-text-bg-color: #000000; // Text color over background color
+  --app-text-secondary-bg-color: #aaaaaa;
+
+  --app-border-color: #7c7c7c;
+  --app-white-bg-color: #ffffff;
+  //Blue Color Theme
+  --app-primary-color-blue: #009ce2;
+  --create-button-color: #6bbbdf;
+
+  //Error Colors
+  --error: #ff0000;
+  --success: #4cae4c;
+
+}
+
+.pull-right {
+  float: right;
+}
+
+//Font Sizes
+
+.mat-select-arrow {
+  color: var(--app-secondary-color) !important;
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+button {
+  cursor: pointer;
+}
+
+form-change, login-form, pl-forgot-password {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+/* JQuery CSS */
+//@import '~jquery-ui/themes/base/all.css';
+/* Material */
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$pl-primary: mat-palette($mat-green);
+$pl-accent: mat-palette($mat-amber, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$pl-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$pl-theme: mat-light-theme($pl-primary, $pl-accent, $pl-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($pl-theme);
+
+/* Icofont */
+@import './icofont/icofont.css';
+
+/* Material Font */
+@import './material-icon/material-icon.css';
+
+/* Removing Outline */
+input::-moz-focus-inner {
+  border: 0;
+}
+
+object, embed, a, a:hover, a:active, a:focus, button, button:focus {
+  outline: 0;
+}
+.mat-card{
+      box-shadow: none;
+      background: $card-bg;
+      height: 95%;
+      padding: 0 !important;
+      margin: 0;
+  }
+.mat-card:not([class*="mat-elevation-z"]){ box-shadow: none  !important; }
+/* Material Dialog Padding removed. Style the dialog wrapper from component */
+.mat-dialog-container {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.content-withmenu-wrapper {
+  width: 100%;
+  height: 100%;
+      .content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        //left is responsive
+        overflow-y: scroll;
+        height: calc(100vh - 60px);
+      }
+}
+
+.cnt-l {
+  .mat-input-wrapper{padding-bottom: 0}
+}
+.clearfix{
+  clear: both;
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after { clear: both; }
+/* IconFont Color */
+.icofont {
+  color: var(--app-secondary-color);
+  transition: color 0.3s;
+}
+.search-desc.hide-search {
+    display: none !important;
+}
+  .mat-option.mat-selected.mat-primary, .mat-primary .mat-option.mat-selected{color: var(--app-primary-color);}
+  .mat-option.mat-selected:not(.mat-option-multiple), .mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled){
+    background: $bg-white;
+    color: var(--app-primary-color);
+  }
+.icofont:hover {
+  color: var(--app-primary-color);
+}
+md-sidenav-container {
+    width: 100%;
+    height: calc(100% - 60px); // Height of Nav Top removed.
+}
+.mat-sidenav-content{overflow: hidden !important;}
+.login-without-carosal {
+  flex: 1 1 0% !important;
+  -ms-flex: 1 1 0% !important;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  width: 300px;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center;
+  max-width: initial !important;
+  .login-title {
+    display: none;
+  }
+}
+
+.login-without-carosal .flex-login-panel {
+  box-sizing: border-box;
+  margin: 0px;
+  width: 300px;
+  height: auto;
+  min-width: 300px !important;
+  min-height: initial !important;
+  display: flex;
+  display: -ms-flexbox;
+
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  max-width: 100% !important;
+  justify-content: center !important;
+  align-content: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  position: relative !important;
+}
+
+.cdk-global-scrollblock{
+  position: static !important;
+}
+/*.mat-sidenav{
+	display: none !important;
+}*/
+.mat-select-value {
+  top: -10px !important;
+  font-size: 12px;
+  color: var(--app-secondary-color);
+}
+
+.mat-select-arrow {
+  bottom: 4px;
+  position: relative;
+}
+
+.mydp .selector {
+  border: 0 !important;
+  max-width: 100%;
+}
+
+.mydp .weekdaytitle {
+  background-color: #e0e0e0 !important;
+}
+
+.mydp .currmonth {
+  background-color: #fff !important;
+}
+
+.mydp .markcurrday, .mydp .markcurrmonth, .mydp .markcurryear {
+  background: var(--app-secondary-color);
+  border-radius: 50%;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none !important;
+}
+
+.mydp .highlight {
+  color: #333 !important;
+}
+
+.mydp .headertodaybtn {
+  display: none;
+}
+md-icon, span{
+  outline: none;
+}
+
+
+h3.header {
+  color: var(--app-secondary-color);
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+}
+
+
+
+//Dialogue window
+.dialog-box {
+  width: 300px !important;
+  height: 150px !important;
+  text-align: center;
+  h1 {
+    font-size: 20px;
+    color: var(--app-secondary-color);
+    margin: 40px 0;
+  }
+  .mat-dialog-actions {
+    justify-content: center;
+    .mat-button {
+      background: var(--app-primary-color);
+      margin-top: 20px;
+    }
+  }
+  .mat-dialog-actions:last-child {
+    margin-bottom: 24px !important;
+  }
+}
+ .mbl-hide{
+    display: none !important;
+  }
+.profile-button-wrapper {
+  .mat-button span {
+    color: #666 !important;
+  }
+  button:hover {
+    background-color: transparent !important;
+  }
+  .mat-button:hover .mat-button-focus-overlay {
+    background-color: transparent !important;
+  }
+
+}
+    .upload-widget{
+        cursor: pointer;
+       input{
+           width: 10px !important;
+           opacity: 0 !important;
+       }
+        .js .inputfile {
+            height: 0.1px;
+            opacity: 0 !important;
+            overflow: hidden;
+            position: absolute;
+            width: 0.1px;
+            z-index: -1;
+
+
+        }
+        .inputfile-1 + label {
+            color:var(--app-primary-color);
+            cursor: pointer;
+        }
+        .inputfile + label {
+            cursor: pointer;
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            overflow: hidden;
+            padding:5px 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: -15px;
+        }
+    }
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+button::-moz-focus-inner {
+  border: 0;
+}
+h1.com-txt{text-align: center; margin: 100px;}
+
+#custom-scroll::-webkit-scrollbar{width: 5px; height: 3px; }
+#custom-scroll::-webkit-scrollbar-thumb{
+	border-radius: 5px;
+  background-color: var(--app-primary-color);
+}
+.custom-scroll::-webkit-scrollbar{width: 5px; height: 3px; }
+.custom-scroll::-webkit-scrollbar-thumb{
+	border-radius: 5px;
+  background-color: var(--app-primary-color);
+}
+
+
+/*  styles */
+@import './popup.scss';
+@import './breadcrumb.scss';
+@import './global.scss';
+@import './fonts.scss';
+@import './responsive.scss';
+
+
+
+
+
+

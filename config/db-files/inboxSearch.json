@@ -1,0 +1,69 @@
+{
+  "inboxSearch": [
+    {
+      "module": "Mail",
+      "result": [
+        {
+          "recordNumber": "1",
+          "title": "Kevin Ma",
+          "description": "Kevin ma has sent time sheet TS761 for your approval"
+        },
+        {
+          "recordNumber": "3",
+          "title": "Prospecta",
+          "description": "Kevin ma has sent time sheet TS763 for your approval",
+          "sender ": "111",
+          "receiver": "11"
+        },
+        {
+          "recordNumber": "9",
+          "title": "Prospecta",
+          "description": "Kevin ma has sent time sheet TS769 for your approval",
+          "sender ": "111",
+          "receiver": "11"
+        },
+        {
+          "recordNumber": "15",
+          "title": "Kevin",
+          "description": "Kevin ma has sent time sheet TS7615 for your approval",
+          "sender ": "111",
+          "receiver": "11"
+        }
+      ]
+    },
+    {
+      "module": "chat",
+      "result": [
+        {
+          "recordNumber": "49",
+          "title": "#Meeting TS7649",
+          "description": "Kevin ma has sent time sheet for your approval",
+          "helpText": "this is help text ",
+          "firstName": "111",
+          "lastName": "11"
+        },
+        {
+          "recordNumber": "47",
+          "title": "#Meeting TS7647",
+          "description": "Kevin ma has sent time sheet TS7647 for your approval",
+          "sender": "111",
+          "receiver": "11"
+        },
+        {
+          "recordNumber": "5",
+          "title": "#Meeting TS767",
+          "description": "Kevin ma has sent time sheet TS767 for your approval",
+          "sender": "111",
+          "receiver": "11"
+        },
+        {
+          "recordNumber": "7",
+          "title": "#Meeting",
+          "description": "Kevin ma has sent time sheet TS767 for your approval",
+          "sender": "111",
+          "receiver": "11"
+        }
+      ]
+    }
+  ]
+}

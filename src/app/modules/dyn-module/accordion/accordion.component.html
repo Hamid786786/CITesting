@@ -1,0 +1,8 @@
+<div #accordionDiv class="accordion">
+  <div *ngFor="let group of groups;let i = index;" class="list-view-mobile">
+    <app-accordion-group [group]="group" [header]="header" (moreData)="moreDetails($event)">
+        
+    </app-accordion-group> 
+</div> 
+<md-icon *ngIf = "page >= 1 " (click) = "moreRows()" class="load-more">arrow_drop_down_circle</md-icon>
+</div>

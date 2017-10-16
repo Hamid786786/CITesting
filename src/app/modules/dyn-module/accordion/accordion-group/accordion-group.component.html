@@ -1,0 +1,20 @@
+<md-expansion-panel class="accordion-group">
+    <md-expansion-panel-header>
+      <md-panel-title class="heading-label">
+          {{group.heading.label}}
+      </md-panel-title>
+      <md-panel-description  class="heading-value">
+          {{group.heading.value}}
+      </md-panel-description>
+    </md-expansion-panel-header>
+  
+    <div *ngFor = "let head of header;let j = index;">
+        <!-- <div *ngIf=header.flag> for add or delete column-->
+            <p><span class="field-header">{{head.headerLabel}}</span> : <span class="field-txt">{{group[head.fieldId]}}</span>
+                <!-- <span (click) = "changeHeader(equipment,header,i,$event)">#</span> -->
+            </p>
+        <!-- </div> -->
+    </div>
+    <p (click)="moreDetails(group['equipmentNumber'])"><u>More Deatils</u></p>
+  
+  </md-expansion-panel>

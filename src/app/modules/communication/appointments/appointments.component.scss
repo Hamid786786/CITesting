@@ -1,0 +1,26 @@
+@import 'src/styles/material-color.scss';
+.cal-view-widget {
+  margin-right: 0px;
+  height: 100%;
+  overflow-y: scroll;
+  .cal-view-details {
+    border-bottom: 1px solid $border-gray-light;
+    padding: 10px 0;
+    margin-right: 5px;
+    h3, h4, p {
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 14px;
+      color: var(--app-secondary-color);
+      cursor: pointer;
+    }
+    h4, p {
+      font-size: 13px;
+
+    }
+  }
+}
+

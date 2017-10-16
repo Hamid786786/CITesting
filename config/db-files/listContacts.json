@@ -1,0 +1,64 @@
+{
+  "listContacts": [
+    {
+      "id": "1",
+      "name": "Ajay",
+      "email": "ajay@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Karthik",
+      "email": "karthik@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Priya",
+      "email": "priya@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Ravi",
+      "email": "ravi@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Abhilash",
+      "email": "abhilash@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Shehnaz",
+      "email": "shehnaz@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Suresh",
+      "email": "suresh@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Pavithra",
+      "email": "pavithra@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Srivalli",
+      "email": "srivalli@techjini.com",
+      "profile": "./*.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Srikanth",
+      "email": "srikanth@techjini.com",
+      "profile": "./*.jpg"
+    }
+  ]
+}

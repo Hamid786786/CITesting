@@ -1,0 +1,35 @@
+<!--
+       Add formControlName to the radio group and not to each radio button
+       Check https://github.com/angular/material2/issues/1875
+
+       If adding formControlName to each radio button:
+
+       Not adding ngDefaultControl to the radio button can result in an error with the message:
+       No value accessor for form control with name {{field.fieldId}} when using formControlName
+       Resource: http://stackoverflow.com/questions/38978166/no-value-accessor-for-form-control-with-name-recipient
+
+       Just add a * for checkbox because there is no `required` property
+
+       angular2 support for readonly is pending for Reactive Forms: https://github.com/angular/angular/issues/11447
+       create a hidden input and display
+-->
+<div [formGroup]="form">
+  <label>{{field.label}} <span class="is-required" *ngIf="field.isMandatory"> *</span> </label>
+  <md-radio-group
+    fxLayoutWrap
+    [formControlName]="field.fieldId"
+    fxLayout="row"
+    [ngStyle]="{'justify-content': 'space-between'}"
+    (change)="handleChange($event)"
+  >
+    <ng-container *ngIf="field.settings && field.settings['valueList']">
+      <md-radio-button
+        *ngFor="let option of field.settings['valueList']"
+        [value]="option.value"
+        [disableRipple]="true"
+      >
+        {{option.label}}
+      </md-radio-button>
+    </ng-container>
+  </md-radio-group>
+</div>

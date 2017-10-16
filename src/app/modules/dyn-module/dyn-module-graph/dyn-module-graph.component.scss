@@ -1,0 +1,97 @@
+@import 'src/styles/material-color.scss';
+app-equipment-graph {
+    display: flex;
+    position: relative;
+    //margin-bottom: 30px !important;
+    .btn-more {
+            background: transparent none repeat scroll 0 0;
+            border: 0 none;
+            bottom: 25px;
+            position: absolute;
+            right: -55px;
+            .mat-icon{
+                width: auto;
+                height: auto;
+                font-size: 43px;
+            }
+        }
+    .new-cont {
+        height: 320px;
+        overflow-y: scroll;
+        flex: 1;
+    }
+    .graph-container {
+        display: flex;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        margin-right: 5px;
+        .graph-l,
+        .graph-r {
+            background: #ffffff none repeat scroll 0 0;
+            border-radius: 5px;
+            background: $bg-white;
+            -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex: 0 0 48.45%;
+            flex-direction: column;
+            margin-left: 5px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            min-height: 295px;
+            max-height: 295px;
+            overflow: hidden;
+            position: relative;
+          //  min-width: 300px;
+            .box {
+                height: 100%;
+                margin: 5px 20px 35px;;
+                flex: 1 1 0;
+                overflow: hidden;
+                img{
+                    max-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                }
+                .widget-pic{
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+                    background-position: 0;
+                }
+            }
+            h3 {
+                font-size: 16px;
+                color: var(--app-primary-color);
+                font-family: $font-stack;
+                font-weight: 500;
+                margin: 15px;
+            }
+            .icon-widget {
+                bottom: 3px;
+                position: absolute;
+                right: 15px;
+                md-icon {
+                    cursor: pointer;
+                    font-size: 15px;
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+        .graph-l:nth-of-type(odd){ margin-right: 1.5%;}
+        .graph-l:hover,
+        .graph-r:hover {
+            box-shadow: 0px 1px 3px 1px var(--app-primary-color);
+        }
+       
+       
+    }
+}
+.mat-tooltip{
+    &.load_more{
+        margin-top: -5%;
+    }
+}

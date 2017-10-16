@@ -1,0 +1,26 @@
+<div *ngIf="isVisible" [@backdrop]="isVisible ? 'visible' : 'hidden'"
+     #backdrop class="modal-open pl-modal-backdrop pl-dialog-mask"
+     tabindex="-1" role="dialog">
+  <div [@modal] [style.max-width]="settings.maxWidth"
+       class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close"
+                (click)="hide()">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"> {{ settings.title }} </h4>
+      </div>
+      <div class="modal-body">
+        <ng-content></ng-content>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default"
+                (click)="hide()"> {{'Close' | translate}}
+        </button>
+        <button type="button" class="btn btn-primary"
+                (click)="submit()"> {{'Save changes' | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

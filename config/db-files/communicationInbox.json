@@ -1,0 +1,935 @@
+{
+  "communicationInbox": [
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Kevin Ma",
+      "equipmentDetails": "Kevin ma has sent time sheet TS761 for your approval",
+      "receivedOn": 1501672270000,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1501672030000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 1
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS762 for your approval",
+      "receivedOn": 1501669810000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1501666210000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 2
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS763 for your approval",
+      "receivedOn": 1501662610000,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1500287004000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 3
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS764 for your approval",
+      "receivedOn": 1501659010000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 4
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Friendship",
+      "equipmentDetails": "Kevin ma has sent time sheet TS765 for your approval",
+      "receivedOn": 1498904604000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 5
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS766 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 6
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS767 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498904604000,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 7
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS768 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498904604000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 8
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS769 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1559384604000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 9
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7610 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": false,
+      "id": 10
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7611 for your approval",
+      "receivedOn": 1559384604000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 11
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7612 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 12
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Personal",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7613 for your approval",
+      "receivedOn": 1559903004000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1559903004000,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 13
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7614 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 14
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7615 for your approval",
+      "receivedOn": 1559903004000,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 15
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7616 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 16
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7617 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 17
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7618 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1596795804000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 18
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7619 for your approval",
+      "receivedOn": 1596795804000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 19
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7620 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 20
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7621 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1596795804000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 21
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7622 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1596795804000,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 22
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7623 for your approval",
+      "receivedOn": 1597055004000,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 23
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7624 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 24
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Friendship",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7625 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 25
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7626 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 26
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7627 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 27
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7628 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 28
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7629 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 29
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7630 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 30
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Friendship",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7631 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 31
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7632 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 32
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7633 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 33
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7634 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 34
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7635 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 35
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7636 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 36
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7637 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 37
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7638 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 38
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Prospecta",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7639 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 39
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7640 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 40
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7641 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 41
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7642 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 42
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7643 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 43
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Kevin",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7644 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 44
+    },
+    {
+      "type": "mail",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7645 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 45
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7646 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 46
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7647 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 47
+    },
+    {
+      "type": "tasks",
+      "equipmentIdentifier": "Jayant",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7648 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": true,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": false,
+      "action": "view",
+      "isRead": true,
+      "id": 48
+    },
+    {
+      "type": "chat",
+      "equipmentIdentifier": "#Meeting",
+      "equipmentDetails": "Kevin ma has sent time sheet TS7649 for your approval",
+      "receivedOn": 1498058532779,
+      "isPrioritySet": false,
+      "from": "John Smith",
+      "to": [
+        "Jayant saika",
+        "Jodie Uthappa"
+      ],
+      "greetings": "Dear Jayant",
+      "contentBody": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum MAIL",
+      "dueDate": 1498154532779,
+      "priority": true,
+      "action": "view",
+      "isRead": true,
+      "id": 49
+    }
+  ]
+}
