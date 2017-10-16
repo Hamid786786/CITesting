@@ -46,5 +46,7 @@ export class AppComponent implements OnInit {
   public sortList() {
     this._list.sortList();
   }
-
+  public test() {
+    //
+  }
 }
