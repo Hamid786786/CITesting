@@ -146,7 +146,7 @@ module.exports = function (config) {
     browserDisconnectTimeout:5000,
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
-      exitOnResourceError: false
+      exitOnResourceError: true
     },
 
     /*
