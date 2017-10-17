@@ -143,10 +143,9 @@ module.exports = function (config) {
         debug: true
       }
     },
-
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
-      exitOnResourceError: true
+      exitOnResourceError: false;
     },
 
     /*
