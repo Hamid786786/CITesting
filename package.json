@@ -104,7 +104,7 @@
     "moment": "2.18.1",
     "ng2-validation": "4.1.0",
     "ngx-quill": "1.4.0",
-    "phantomjs-prebuilt": "2.1.15",
+    "phantomjs-prebuilt": "2.1.11",
     "pseudomap": "1.0.2",
     "reflect-metadata": "0.1.10",
     "rxjs": "5.4.3",
