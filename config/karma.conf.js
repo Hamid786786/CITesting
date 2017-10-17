@@ -17,25 +17,25 @@ module.exports = function (config) {
      */
     frameworks: ['jasmine'],
     plugins: [
-        require('karma-jasmine'),
-        require('karma-chrome-launcher'),
-        require('karma-jasmine-html-reporter'),
-        require('karma-coverage-istanbul-reporter'),
-        require('istanbul-instrumenter-loader'),
-        require('@angular/cli/plugins/karma'),
-        require('karma-sourcemap-loader'),
-        require('karma-webpack'),
-        require('karma-coverage'),
-        require('karma-remap-coverage')
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('istanbul-instrumenter-loader'),
+      require('@angular/cli/plugins/karma'),
+      require('karma-sourcemap-loader'),
+      require('karma-webpack'),
+      require('karma-coverage'),
+      require('karma-remap-coverage')
     ],
-      coverageIstanbulReporter: {
-          reports: [ 'text-summary', 'html', 'lcovonly' ],
-          fixWebpackSourcePaths: true
-      },
-      port: 9876,
-      colors: true,
-      autoWatch: true,
-      singleRun: false,
+    coverageIstanbulReporter: {
+      reports: ['text-summary', 'html', 'lcovonly'],
+      fixWebpackSourcePaths: true
+    },
+    port: 9876,
+    colors: true,
+    autoWatch: true,
+    singleRun: false,
     // list of files to exclude
     exclude: [],
 
@@ -71,17 +71,17 @@ module.exports = function (config) {
     webpack: testWebpackConfig,
 
     coverageReporter: {
-          type : 'html',
-          dir : 'coverage/',
-          file: 'coverage.xml',
-          includeAllSources: true
+      type: 'html',
+      dir: 'coverage/',
+      file: 'coverage.xml',
+      includeAllSources: true
     },
     remapCoverageReporter: {
-          'text-summary': null,
-          json: './coverage/coverage.json',
-          html: './coverage/html',
-          cobertura: './coverage/cobertura.xml'
-        },
+      'text-summary': null,
+      json: './coverage/coverage.json',
+      html: './coverage/html',
+      cobertura: './coverage/cobertura.xml'
+    },
 
     junitReporter: {
       outputDir: './karma-results',
@@ -106,7 +106,7 @@ module.exports = function (config) {
      * possible values: 'dots', 'progress'
      * available reporters: https://npmjs.org/browse/keyword/karma-reporter
      */
-    reporters: ['progress', 'kjhtml',  'coverage', 'coverage-istanbul', 'remap-coverage'],
+    reporters: ['progress', 'kjhtml', 'coverage', 'coverage-istanbul', 'remap-coverage'],
 
     // web server port
 
@@ -133,12 +133,13 @@ module.exports = function (config) {
     customLaunchers: {
       ChromeTravisCi: {
         base: 'Chrome',
-        flags: ['--no-sandbox']
+        flags: ['--headless',
+          '--no-sandbox']
       }
     },
 
     phantomjsLauncher: {
-	  // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
+      // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
       exitOnResourceError: true
     },
 
@@ -165,18 +166,18 @@ module.exports = function (config) {
 
   if (process.platform == 'darwin') {
     configuration.browsers = [
-      'Chrome', 
-      'Firefox', 
+      'Chrome',
+      'Firefox',
       'Safari'
-    ]; 
+    ];
   }
 
   if (process.platform.startsWith('win')) {
     configuration.browsers = [
-      'Chrome', 
-      'Firefox', 
+      'Chrome',
+      'Firefox',
       'IE'
-    ]; 
+    ];
   }
 
   config.set(configuration);
