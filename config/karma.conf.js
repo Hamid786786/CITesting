@@ -157,10 +157,10 @@ module.exports = function (config) {
     /*
      * Timeout definitions
      */
-    captureTimeout: 60000,
+    captureTimeout: 90000,
     browserDisconnectTimeout: 60000,
-    browserDisconnectTolerance: 5,
-    browserNoActivityTimeout: 60000
+    browserDisconnectTolerance: 2,
+    browserNoActivityTimeout: 90000
   };
 
   if (process.env.TRAVIS) {
