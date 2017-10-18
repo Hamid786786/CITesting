@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/core/_services/auth/auth.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/core/_services/auth</a> auth.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>62/131</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.58% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.11% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>57/121</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Injectable, EventEmitter, Output} from '@angular/core';
+import {Http, Headers, Response} from '@angular/http';
+import {ISelectItem, IAuthResponse} from '@pl-core/_interfaces';
+import {User} from '@pl-core/_models';
+import {CONFIG} from '@pl-core/_config';
+import {Subscription} from 'rxjs/Subscription';
+import {Observable} from 'rxjs/Observable';
+import {PaletteConfiguratorService} from '../palette/palette-configurator.service';
+import {PaletteFetcherService} from '../palette/palette-fetcher.service';
+import {Router} from '@angular/router';
+import {Subject} from 'rxjs/Subject';
+import { GLOBAL} from '@pl-core/_config';
+import {CreateWidgetService} from '@pl-core/_services/dashboardWidgets/createWidgetService.service';
+&nbsp;
+@Injectable()
+export class AuthService {
+&nbsp;
+  public static readonly CURRENT_USER: string = 'currentUser';
+  public static readonly CURRENT_TENANT: string = 'currentTenantId';
+  public static readonly CURRENT_TENANT_PRIMARY_COLOR: string = 'primaryColor';
+  public redirectUrl: string;
+  // Tenant id can be passed to login page to load a particular tenants login page.
+  // This variable will store that tenant id to be used for login and logout.
+  // In app tenant id will still be governed by user login.
+  public tenantIdForLogin: string;
+ // public getWidgets$: Observable&lt;any&gt;;
+  public getTenantID$: Observable&lt;any&gt;;
+  public getMapKey$: Observable&lt;any&gt;;
+  public roleChangeObservable$: Observable&lt;any&gt;;
+&nbsp;
+  // Event emitted when current role is changed
+  @Output() public roleChangeEventEmitter: EventEmitter&lt;string&gt; = new EventEmitter(true);
+&nbsp;
+  // Event emitted when current location is changed
+  @Output() public locationChangeEventEmitter: EventEmitter&lt;string&gt; = new EventEmitter(true);
+  private _tenantPaletteSub: Subscription;
+  // private widgetSubject: Subject&lt;boolean&gt;;
+  private tenantIdSubject: Subject&lt;boolean&gt;;
+  private mapKeySubject: Subject&lt;any&gt;;
+  private roleChangeSubject: Subject&lt;any&gt;;
+&nbsp;
+  constructor(private _http: Http,
+              private _paletteConfigurator: PaletteConfiguratorService,
+              private _paletteFetcher: PaletteFetcherService,
+              private _router: Router
+            ) {
+//    this.widgetSubject = new Subject&lt;boolean&gt;();
+    this.tenantIdSubject = new Subject&lt;boolean&gt;();
+    this.mapKeySubject = new Subject&lt;any&gt;();
+     // LIstener for role change
+    this.roleChangeSubject = new Subject&lt;any&gt;();
+&nbsp;
+  //  this.getWidgets$ = this.widgetSubject.asObservable();
+    this.getTenantID$ = this.tenantIdSubject.asObservable();
+    this.getMapKey$ = this.mapKeySubject.asObservable();
+    this.roleChangeObservable$ = this.roleChangeSubject.asObservable();
+  }
+<span class="fstat-no" title="function not covered" >  public updateMapKey() {</span>
+    let mapKey = <span class="cstat-no" title="statement not covered" >this.currentUser().agmKey;</span>
+<span class="cstat-no" title="statement not covered" >    this.mapKeySubject.next(mapKey);</span>
+  }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public login(</span>username: string, password: string): Observable&lt;IAuthResponse&gt; {</span>
+    // TODO, need to change the http.get =&gt;http.post if the api wants the request to be POST
+<span class="cstat-no" title="statement not covered" >    return this._http.get(CONFIG.urls.authenticate + '?username=' + username + '&amp;password=' + password)</span>
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        if (response.json().length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >          return {authenticated: false, error: 'Username or Password Invalid'};</span>
+        }
+        let user: any = <span class="cstat-no" title="statement not covered" >response.json()[0];</span>
+<span class="cstat-no" title="statement not covered" >        if (user === undefined || user.error) {</span>
+<span class="cstat-no" title="statement not covered" >          return {authenticated: false, error: user.error};</span>
+        }
+        // login successful if there's a jwt token in the response
+<span class="cstat-no" title="statement not covered" >        if (user &amp;&amp; user.token &amp;&amp; user.username === username &amp;&amp; user.password === password &amp;&amp; user.status === 200) {</span>
+          // store user details and jwt token iaddWidgetn local storage to keep user logged in between page refreshes
+<span class="cstat-no" title="statement not covered" >          localStorage.setItem('AuthorizationToken', user.token);</span>
+<span class="cstat-no" title="statement not covered" >          this.setUser(user);</span>
+<span class="cstat-no" title="statement not covered" >          this.updateMapKey();</span>
+<span class="cstat-no" title="statement not covered" >          if (user.tenantId) {</span>
+<span class="cstat-no" title="statement not covered" >            this.setTenantID(user.tenantId);</span>
+          }
+<span class="cstat-no" title="statement not covered" >          this.setTenantPalette();</span>
+<span class="cstat-no" title="statement not covered" >          return {authenticated: true, error: 'None'};</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (user.username !== username || user.password !== password || user.status === 401) {</span>
+<span class="cstat-no" title="statement not covered" >          return {authenticated: false, error: 'Username or Password Invalid'};</span>
+        }
+      });
+  }
+<span class="fstat-no" title="function not covered" >  public getUserById(</span>id) {
+<span class="cstat-no" title="statement not covered" >    return this._http.get( CONFIG.urls.authenticate + '/' + id)</span>
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+        let  user: any = <span class="cstat-no" title="statement not covered" >response.json();</span>
+<span class="cstat-no" title="statement not covered" >        return user;</span>
+      });
+  }
+<span class="fstat-no" title="function not covered" >  public changePassword(</span>id, userObj) {
+<span class="cstat-no" title="statement not covered" >    return this._http.put( CONFIG.urls.authenticate + '/' + id, userObj)</span>
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+        let user: any = <span class="cstat-no" title="statement not covered" >response.json();</span>
+<span class="cstat-no" title="statement not covered" >        return user;</span>
+      });
+  }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public updateUserProfile(</span>id, userObj) {</span>
+<span class="cstat-no" title="statement not covered" >    return this._http.put( CONFIG.urls.authenticate + '/' + id, userObj)</span>
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+        let user: any = <span class="cstat-no" title="statement not covered" >response.json();</span>
+<span class="cstat-no" title="statement not covered" >        this.setUser(user);</span>
+<span class="cstat-no" title="statement not covered" >        return user;</span>
+      });
+  }
+  /**
+   * logout and navigate to login
+   */
+  public logout(): void {
+    let tid = this.getTenantID();
+    this.logoutInternal();
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (tid) {
+<span class="cstat-no" title="statement not covered" >      this._router.navigate(['/login/default/' + tid]);</span>
+    } else {
+      this._router.navigate(['/login/default']);
+    }
+  }
+&nbsp;
+  /**
+   * logout and navigate to provided url
+   */
+<span class="fstat-no" title="function not covered" >  public logoutAndRedirectTo(</span>url: string): void {
+<span class="cstat-no" title="statement not covered" >    this.logoutInternal();</span>
+<span class="cstat-no" title="statement not covered" >    this._router.navigate([url]);</span>
+  }
+&nbsp;
+  public isAuthenticated(): boolean {
+    if (localStorage.getItem(AuthService.CURRENT_USER)) {
+      return true;
+    }
+    return false;
+  }
+&nbsp;
+  public currentUser(): User {
+    if (localStorage.getItem(AuthService.CURRENT_USER)) {
+      return JSON.parse(localStorage.getItem(AuthService.CURRENT_USER));
+    } else {
+      return null;
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public  setTenantID(</span>tId) {
+<span class="cstat-no" title="statement not covered" >    this.tenantIdForLogin = tId;</span>
+    // CURRENT_TENANT
+<span class="cstat-no" title="statement not covered" >    this.tenantIdSubject.next(tId);</span>
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem(AuthService.CURRENT_TENANT, this.tenantIdForLogin);</span>
+  }
+&nbsp;
+  public getTenantID() {
+    return localStorage.getItem(AuthService.CURRENT_TENANT);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public setCurrentRole(</span>role: string): void {
+<span class="cstat-no" title="statement not covered" >    if (this.isAuthenticated()) {</span>
+      let currentUser: User = <span class="cstat-no" title="statement not covered" >this.currentUser();</span>
+<span class="cstat-no" title="statement not covered" >      if (currentUser.currentRole === role) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      for (let roleI<span class="cstat-no" title="statement not covered" > of currentUser.roles) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (roleI.value === role) {</span>
+<span class="cstat-no" title="statement not covered" >          currentUser.currentRole = role;</span>
+<span class="cstat-no" title="statement not covered" >          this.setUser(currentUser);</span>
+<span class="cstat-no" title="statement not covered" >          localStorage.setItem('selectedRole', role);</span>
+<span class="cstat-no" title="statement not covered" >          this.roleChangeEventEmitter.emit(role);</span>
+<span class="cstat-no" title="statement not covered" >          this.roleChangeSubject.next(true);</span>
+        }
+      }
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public setCurrentLocation(</span>location: string): void {
+<span class="cstat-no" title="statement not covered" >    if (this.isAuthenticated()) {</span>
+      let currentUser: User = <span class="cstat-no" title="statement not covered" >this.currentUser();</span>
+<span class="cstat-no" title="statement not covered" >      if (currentUser.currentLocation === location) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      for (let loc<span class="cstat-no" title="statement not covered" > of currentUser.locations) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (loc.value === location) {</span>
+<span class="cstat-no" title="statement not covered" >          currentUser.currentLocation = location;</span>
+<span class="cstat-no" title="statement not covered" >          this.setUser(currentUser);</span>
+<span class="cstat-no" title="statement not covered" >          this.locationChangeEventEmitter.emit(location);</span>
+        }
+      }
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public setTenantPalette(): void {</span></span>
+    let tenantId = <span class="cstat-no" title="statement not covered" >this.currentUser().tenantId;</span>
+<span class="cstat-no" title="statement not covered" >    tenantId = tenantId || tenantId === '' ? tenantId : '0';</span>
+<span class="cstat-no" title="statement not covered" >    if (tenantId === '0') {</span>
+<span class="cstat-no" title="statement not covered" >      this._tenantPaletteSub = this._paletteFetcher.getApplicationPalette()</span>
+        .subscribe(<span class="fstat-no" title="function not covered" >(</span>palette) =&gt; {
+<span class="cstat-no" title="statement not covered" >          this._paletteConfigurator.populateAppColors(palette);</span>
+        });
+    } else {
+<span class="cstat-no" title="statement not covered" >      this._tenantPaletteSub = this._paletteFetcher.getTenantPalette(tenantId)</span>
+        .subscribe(<span class="fstat-no" title="function not covered" >(</span>palette) =&gt; {
+<span class="cstat-no" title="statement not covered" >          this._paletteConfigurator.populateAppColors(palette);</span>
+        });
+    }
+  }
+&nbsp;
+  private logoutInternal(): void {
+    // remove user from local storage to log user out
+    localStorage.removeItem(AuthService.CURRENT_USER);
+    localStorage.removeItem(AuthService.CURRENT_TENANT);
+    // unsubscribe from the tenant palette
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this._tenantPaletteSub) {
+<span class="cstat-no" title="statement not covered" >      this._tenantPaletteSub.unsubscribe();</span>
+    }
+    // reload app palette
+    this._tenantPaletteSub = this._paletteFetcher.getApplicationPalette()
+      .subscribe((palette) =&gt; {
+        this._paletteConfigurator.populateAppColors(palette);
+        // unsubscribe from the app palette
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (this._tenantPaletteSub) {
+<span class="cstat-no" title="statement not covered" >          this._tenantPaletteSub.unsubscribe();</span>
+        }
+      });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  private setUser(</span>user: User): void {
+    // set user in local storage to log user in or persist changes like role and location
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem(AuthService.CURRENT_USER, JSON.stringify(user));</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

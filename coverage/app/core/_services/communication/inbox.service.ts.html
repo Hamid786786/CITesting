@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/core/_services/communication/inbox.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/core/_services/communication</a> inbox.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.52% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.78% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.55% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>24/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable} from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { IInbox } from '@pl-core/_interfaces';
+import { CONFIG } from '@pl-core/_config';
+import { ExceptionService } from '../utils/exception.service';
+import {HttpClient} from '@angular/common/http';
+&nbsp;
+@Injectable()
+export class InboxService {
+  public requestId: number = 0;
+  public query: any;
+  public filter: any;
+  public selectedAppointment: object;
+&nbsp;
+  public selectedFilters: object = {
+    query : null,
+    filter : null,
+    searchByID : null,
+    searchText : null
+  };
+  public inboxDefault: any = null;
+  constructor(
+    private http: HttpClient,
+    private exceptionService: ExceptionService) {
+  }
+&nbsp;
+  //  gets the inboxResourses with the page as the argument
+&nbsp;
+  public getResources(page): Observable&lt;IInbox[]&gt; {
+    return this.http
+      .get(`${CONFIG.urls.communicationinbox}?_page=${page}&amp;_limit=10`)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+  //  sets the priority flag of the inbox with the id and selected obj as the argument
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public setPriority(</span>id, selectedMailObj) {
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+      .put(`${CONFIG.urls.communicationinbox}/${id}`, selectedMailObj)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+  //  sets the read status  flag of the inbox with the id and selected obj as the argument
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public setReadStatus(</span>id, selectedMailObj) {
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+      .put(`${CONFIG.urls.communicationinbox}/${id}`, selectedMailObj)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+  //  gets the inbox details  of the inbox with the id as the argument
+&nbsp;
+  public getInboxDetails(id) {
+    return this.http
+      .get(`${CONFIG.urls.communicationinbox}/${id}`)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+  // sets the filter date
+<span class="fstat-no" title="function not covered" >  public setFilterDate(</span>type, data) {
+<span class="cstat-no" title="statement not covered" >    this.selectedFilters[type] =  data;</span>
+  }
+&nbsp;
+  // gets the filter date
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public getFilterDate() {</span>
+<span class="cstat-no" title="statement not covered" >    return this.selectedFilters;</span>
+  }
+&nbsp;
+  // sets  the inbox default value
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public setInboxDefault(</span>value) {
+<span class="cstat-no" title="statement not covered" >      this.inboxDefault = value;</span>
+  }
+&nbsp;
+  // gets  the inbox default value
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public getInboxDefault() {</span>
+<span class="cstat-no" title="statement not covered" >    return this.inboxDefault;</span>
+  }
+&nbsp;
+  // gets  the inbox search related data with params as query,filter ,page and id
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public getInboxSearch(</span>query, filter, page, id) {
+    let url = `${<span class="cstat-no" title="statement not covered" >CONFIG.urls.communicationinbox}?_page=${page}&amp;_limit=10`;</span>
+<span class="cstat-no" title="statement not covered" >    if (query) {</span>
+<span class="cstat-no" title="statement not covered" >      url = url + `&amp;q=${query}` ;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (filter) { // TODO update if priority data updates</span>
+<span class="cstat-no" title="statement not covered" >      url = ( filter === 'priority' ) ? url + `&amp;isPrioritySet=true` : url + `&amp;type=${filter}`;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (id) {</span>
+<span class="cstat-no" title="statement not covered" >      url = url + `&amp;id=${id}`;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+      .get(url)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+  // gets  the inbox  filters
+&nbsp;
+  public getInboxFilters() {
+    return this.http
+      .get(`${CONFIG.urls.getInboxFilters}`)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

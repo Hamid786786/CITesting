@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/core/_services/utils/form.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/core/_services/utils</a> form.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.22% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.35% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Injectable} from '@angular/core';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
+&nbsp;
+import {ControlType, Tab, FieldOfTab, Form, GridSettings} from '@pl-core/_models';
+&nbsp;
+<span class="fstat-no" title="function not covered" >@Injectable()</span>
+export class FormService {
+  private <span class="cstat-no" title="statement not covered" >controlTypes: typeof ControlType = ControlType;</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public toForm(</span>form: Form): FormGroup {
+    let group = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >    for (let tab<span class="cstat-no" title="statement not covered" > of form.tabs) {</span></span>
+<span class="cstat-no" title="statement not covered" >      for (let field<span class="cstat-no" title="statement not covered" > of tab.fields) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if ('' + field.field.controlType !== '' + this.controlTypes.Grid) {</span>
+          let defaultValue = <span class="cstat-no" title="statement not covered" >'';</span>
+          let validations = <span class="cstat-no" title="statement not covered" >field.isMandatory ? [Validators.required] : [];</span>
+          let fieldId = <span class="cstat-no" title="statement not covered" >field.field.fieldId;</span>
+          let maxLength = <span class="cstat-no" title="statement not covered" >field.field.length;</span>
+<span class="cstat-no" title="statement not covered" >          if (maxLength != null) {</span>
+<span class="cstat-no" title="statement not covered" >            validations.push(Validators.maxLength(maxLength));</span>
+          }
+          // setting disabled property on the form control template might cause changed after checked errors
+          // SET THE `disabled` property on the FormControl when instantiating it...
+          // directly setting .disable on the instance after creating it or after retrieving it
+          // from the formGroup will throw the error in the service
+          // TypeError: Cannot set property disabled of #&lt;AbstractControl&gt; which has only a getter
+          // if it is nessecary, use the approach suggested in the question below
+          // http://stackoverflow.com/questions/40080951/angular2-enable-disable-formcontrol-on-http-response-not-working
+<span class="cstat-no" title="statement not covered" >          group[fieldId] = new FormControl({value: defaultValue, disabled: field.field.isReadOnly}, validations);</span>
+        } else {
+          const gridSettings = <span class="cstat-no" title="statement not covered" >field.field.settings as GridSettings;</span>
+          const rowCount = <span class="cstat-no" title="statement not covered" >gridSettings.rowCount;</span>
+          let updatedGridFields = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >          for (let rowNumber = 0; rowNumber &lt; rowCount; rowNumber++) {</span>
+<span class="cstat-no" title="statement not covered" >            for (let gridField<span class="cstat-no" title="statement not covered" > of gridSettings.fields) {</span></span>
+              let gridValidations = <span class="cstat-no" title="statement not covered" >gridField.isMandatory ? [Validators.required] : [];</span>
+              let maxLength = <span class="cstat-no" title="statement not covered" >gridField.length;</span>
+<span class="cstat-no" title="statement not covered" >              if (maxLength != null) {</span>
+<span class="cstat-no" title="statement not covered" >                gridValidations.push(Validators.maxLength(maxLength));</span>
+              }
+              let gridFieldId = <span class="cstat-no" title="statement not covered" >gridField.fieldId;</span>
+<span class="cstat-no" title="statement not covered" >              updatedGridFields[`${gridFieldId}:${rowNumber}`] = new FormControl({</span>
+                value: '',
+                disabled: gridField.isReadOnly
+              }, gridValidations);
+            }
+          }
+<span class="cstat-no" title="statement not covered" >          group = {</span>
+            ...group,
+            ...updatedGridFields
+          };
+        }
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    return new FormGroup(group);</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

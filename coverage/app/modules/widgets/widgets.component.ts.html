@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modules/widgets/widgets.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/modules/widgets</a> widgets.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/50</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Component, Input, Output, OnInit, EventEmitter, ViewEncapsulation} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import { IGridsterOptions, IGridsterDraggableOptions } from 'angular2gridster';
+import {Router} from '@angular/router';
+import {MdDialog} from '@angular/material';
+import {PopUpComponent} from './pop-up/pop-up.component';
+import {RESOLUTION} from '@pl-core/_config/constants';
+&nbsp;
+@Component({
+  selector: 'app-widgets',
+  templateUrl: './widgets.component.html',
+  styleUrls: ['./widgets.component.scss'],
+  encapsulation : ViewEncapsulation.None
+})
+export class WidgetsComponent implements OnInit {
+  @Input() public widgets;
+  @Output() public <span class="cstat-no" title="statement not covered" >widgetChange: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();</span>
+  @Output() public <span class="cstat-no" title="statement not covered" >deleteWidget: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();</span>
+&nbsp;
+  public <span class="cstat-no" title="statement not covered" >screen = '';</span>
+  public data: any;
+  public <span class="cstat-no" title="statement not covered" >gridsterOptions: IGridsterOptions = {</span>
+    // core configuration is default one - for smallest view. It has hidden minWidth: 0.
+    lanes: 3, // amount of lanes (cells) in the grid
+    direction: 'vertical', // floating top - vertical, left - horizontal
+    dragAndDrop: true, // enable/disable drag and drop for all items in grid
+    resizable: true, // enable/disable resizing by drag and drop for all items in grid
+    widthHeightRatio: 1, // proportion between item width and height
+    shrink: true,
+    responsiveView: true, // turn on adopting items sizes on window resize and enable responsiveOptions
+    responsiveDebounce: 400, // window resize debounce time
+    // List of different gridster configurations for different breakpoints.
+    // Each breakpoint is defined by name stored in "breakpoint" property. There is fixed set of breakpoints
+    // available to use with default minWidth assign to each.
+    // - sm: 576 - Small devices
+    // - md: 768 - Medium devices
+    // - lg: 992 - Large devices
+    // - xl: 1200 - Extra large
+    // MinWidth for each breakpoint can be overwritten like it's visible below.
+    // ResponsiveOptions can overwrite default configuration with any option available.
+    responsiveOptions: [
+      {
+        breakpoint: 'sm',
+        minWidth: RESOLUTION.TINY,
+        lanes: 1
+      },
+      {
+        breakpoint: 'md',
+        minWidth: RESOLUTION.MEDIUM,
+        lanes: 3
+      },
+      {
+        breakpoint: 'lg',
+        minWidth: RESOLUTION.LARGE,
+        lanes: 4
+      },
+      {
+        breakpoint: 'xl',
+        minWidth: RESOLUTION.XLARGE,
+        lanes: 4
+      }
+    ]
+  };
+  public <span class="cstat-no" title="statement not covered" >gridsterDraggableOptions: IGridsterDraggableOptions = {</span>
+    handlerClass: 'panel-heading'
+  };
+  public <span class="cstat-no" title="statement not covered" >itemOptions = {</span>
+    maxWidth: 4,
+    maxHeight: 4
+  };
+<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" ></span>_route: Router,</span> public <span class="cstat-no" title="statement not covered" >dialog: MdDialog </span>) {
+  }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public ngOnInit() {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (window.screen.width &gt;= RESOLUTION.TINY &amp;&amp; window.screen.width &lt; RESOLUTION.MEDIUM) {</span>
+<span class="cstat-no" title="statement not covered" >      this.screen = 'sm';</span>
+    } else <span class="cstat-no" title="statement not covered" >if (window.screen.width &gt;= RESOLUTION.MEDIUM &amp;&amp; window.screen.width &lt;= RESOLUTION.LARGE) {</span>
+<span class="cstat-no" title="statement not covered" >      this.screen = 'md';</span>
+    } else <span class="cstat-no" title="statement not covered" >if (window.screen.width &gt; RESOLUTION.LARGE &amp;&amp; window.screen.width &lt; RESOLUTION.XLARGE) {</span>
+<span class="cstat-no" title="statement not covered" >      this.screen = 'lg';</span>
+    } else <span class="cstat-no" title="statement not covered" >if (window.screen.width &gt;= RESOLUTION.XLARGE) {</span>
+<span class="cstat-no" title="statement not covered" >      this.screen = 'xl';</span>
+    }else {
+<span class="cstat-no" title="statement not covered" >      this.screen = '';</span>
+    }
+    const $resizeEvent = <span class="cstat-no" title="statement not covered" >Observable.fromEvent(window, 'resize')</span>
+      .map(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return document.documentElement.clientWidth;</span>
+      })
+      .debounceTime(200);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $resizeEvent.subscribe(<span class="fstat-no" title="function not covered" >(</span>data) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (data &gt;= RESOLUTION.TINY &amp;&amp; data &lt; RESOLUTION.MEDIUM) {</span>
+<span class="cstat-no" title="statement not covered" >        this.screen = 'sm';</span>
+      } else <span class="cstat-no" title="statement not covered" >if (data &gt;= RESOLUTION.MEDIUM &amp;&amp; data &lt;= RESOLUTION.LARGE) {</span>
+<span class="cstat-no" title="statement not covered" >        this.screen = 'md';</span>
+      } else <span class="cstat-no" title="statement not covered" >if (data &gt; RESOLUTION.LARGE &amp;&amp; data &lt; RESOLUTION.XLARGE) {</span>
+<span class="cstat-no" title="statement not covered" >        this.screen = 'lg';</span>
+      } else <span class="cstat-no" title="statement not covered" >if (data &gt;= RESOLUTION.XLARGE) {</span>
+<span class="cstat-no" title="statement not covered" >        this.screen = 'xl';</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.screen = '';</span>
+      }
+    });
+  }
+&nbsp;
+  // function which triggers on every widget change (drag &amp; drop and resizing)
+<span class="fstat-no" title="function not covered" >  public itemChange(</span>$event: any) {
+<span class="cstat-no" title="statement not covered" >    if (this.screen === $event.breakpoint) {</span>
+<span class="cstat-no" title="statement not covered" >      this.widgetChange.emit(this.widgets);</span>
+    }
+  }
+&nbsp;
+  // on Widget delete
+<span class="fstat-no" title="function not covered" >  public remove(</span>data) {
+<span class="cstat-no" title="statement not covered" >    this.deleteWidget.emit(data);</span>
+  }
+&nbsp;
+  // to redirect to communication page
+<span class="fstat-no" title="function not covered" >  public getDetailInbox(</span>data): void {
+  let id = <span class="cstat-no" title="statement not covered" >data.id;</span>
+<span class="cstat-no" title="statement not covered" >  this._route.navigate(['/communication/inbox/' + id]);</span>
+  }
+&nbsp;
+  // to open a dialog for graph
+<span class="fstat-no" title="function not covered" >  public showDialogPopupGraph(</span>widget) {
+    let dialogRef = <span class="cstat-no" title="statement not covered" >this.dialog.open(PopUpComponent, {disableClose: true, panelClass: 'widgets-modal'});</span>
+<span class="cstat-no" title="statement not covered" >    dialogRef.componentInstance.widget = widget;</span>
+<span class="cstat-no" title="statement not covered" >    dialogRef.afterClosed().subscribe(<span class="fstat-no" title="function not covered" >(</span>result) =&gt; {</span>
+     // this.selectedOption = result;
+   });
+ }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modules/nav/notification/notification.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/modules/nav/notification</a> notification.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>15/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/50</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Observable } from 'rxjs/Observable';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {AuthService} from '../../../core/_services/auth/auth.service';
+import {User} from '../../../core/_models/user';
+import {Router} from '@angular/router';
+import {MdMenuTrigger, MdSnackBar} from '@angular/material';
+import {RESOLUTION, GLOBAL} from '@pl-core/_config/constants';
+import {find} from 'lodash';
+import { TranslateService, NotificationService } from '@pl-core/_services';
+&nbsp;
+@Component({
+  selector: 'app-notification',
+  templateUrl: './notification.component.html',
+  styleUrls: ['./notification.component.scss']
+})
+export class NotificationComponent implements OnInit {
+  public interval;
+  public <span class="cstat-no" title="statement not covered" >showNotificationMenu: boolean = false;</span>
+  public <span class="cstat-no" title="statement not covered" >isMobile: boolean = true;</span>
+  public currentUser: User;
+  public userRoleDetail: any;
+  public isAutherized: boolean;
+  public <span class="cstat-no" title="statement not covered" >notificationPopupEnable: boolean = false;</span>
+  public notify: any;
+  public <span class="cstat-no" title="statement not covered" >notificationCount = '';</span>
+  public notificationMessage;
+  public audio;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" ></span>_authService: AuthService,</span> private <span class="cstat-no" title="statement not covered" >_route: Router,</span>
+              public <span class="cstat-no" title="statement not covered" >translateService: TranslateService,</span>
+              private <span class="cstat-no" title="statement not covered" >snackBar: MdSnackBar,</span>
+              private <span class="cstat-no" title="statement not covered" >notificationService: NotificationService)</span> {
+<span class="cstat-no" title="statement not covered" >                this.audio = new Audio();</span>
+<span class="cstat-no" title="statement not covered" >                this.audio.src = GLOBAL.constants.NOTIFICATION_SOUND;</span>
+              }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public ngOnInit() {</span></span>
+    // Added for bubble count
+<span class="cstat-no" title="statement not covered" >    this.notificationService.subscribeNotification(<span class="fstat-no" title="function not covered" >(</span>message) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.notificationMessage = message;</span>
+<span class="cstat-no" title="statement not covered" >      this.audio.load();</span>
+<span class="cstat-no" title="statement not covered" >      this.audio.play();</span>
+<span class="cstat-no" title="statement not covered" >      this.notificationCount = message.length &gt; GLOBAL.constants.MAX_NOTIFICATION_COUNT ? GLOBAL.constants.MAX_NOTIFICATION_EXCEED : message.length ;</span>
+    });
+    // bubble count ends here
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.currentUser = this._authService.currentUser();</span>
+<span class="cstat-no" title="statement not covered" >    if (window.screen.width &lt;= RESOLUTION.LARGE) {</span>
+<span class="cstat-no" title="statement not covered" >    this.isMobile = true;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.isMobile = false;</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public showNotification(): void {</span>
+<span class="cstat-no" title="statement not covered" >    this.closeMenu();</span>
+&nbsp;
+    // TODO: reset bubble count on opening popup
+<span class="cstat-no" title="statement not covered" >    clearInterval(this.notificationService.interval);</span>
+<span class="cstat-no" title="statement not covered" >    this.notificationCount = '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.currentUser = this._authService.currentUser();</span>
+<span class="cstat-no" title="statement not covered" >    if (this.currentUser.roles.length &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >      this.userRoleDetail = find(this.currentUser.roles, { value: this.currentUser.currentRole });</span>
+<span class="cstat-no" title="statement not covered" >      this.isAutherized = this.userRoleDetail.isAutherized;</span>
+<span class="cstat-no" title="statement not covered" >      if (this.userRoleDetail.isAutherized) {</span>
+<span class="cstat-no" title="statement not covered" >        this._route.navigate(['/communication']);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >         this.snackBar.open(this.translateService.instant('Unauthorized User') , this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['error']
+        });
+<span class="cstat-no" title="statement not covered" >         this._route.navigate(['/dashboard']);</span>
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (this.currentUser.roles.length === 1) {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.currentUser.roles[0].isAutherized) {</span>
+<span class="cstat-no" title="statement not covered" >             this._route.navigate(['/communication']);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >         this.snackBar.open(this.translateService.instant('Unauthorized User'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['error']
+        });
+<span class="cstat-no" title="statement not covered" >         this._route.navigate(['/dashboard']);</span>
+      }
+    }
+&nbsp;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public closeMenu() {</span>
+<span class="cstat-no" title="statement not covered" >    this.showNotificationMenu = false;</span>
+  }
+<span class="fstat-no" title="function not covered" >  public openMenu() {</span>
+<span class="cstat-no" title="statement not covered" >    this.showNotificationMenu = true;</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

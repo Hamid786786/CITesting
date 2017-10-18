@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/core/_services/dyn-module/dyn-module.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/core/_services/dyn-module</a> dyn-module.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.36% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.92% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/52</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { Response } from '@angular/http';
+import { CONFIG } from '@pl-core/_config';
+import { ExceptionService } from '../utils/exception.service';
+import {HttpClient} from '@angular/common/http';
+&nbsp;
+@Injectable()
+export class DynModuleService {
+  public apiName: any;
+  public apiName2: any;
+  constructor(private http: HttpClient, private exceptionService: ExceptionService) {
+  }
+&nbsp;
+  // getEquipmentList Meta service with moduleid as the params
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public getEquipmentMeta(</span>moduleId) {
+<span class="cstat-no" title="statement not covered" >    if (moduleId === 1) {</span>
+<span class="cstat-no" title="statement not covered" >      this.apiName = CONFIG.urls.equipmentMetadata;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.apiName = CONFIG.urls.equipmentMetadata2;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+      .get(`${this.apiName}?moduleId=${moduleId}`)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+&nbsp;
+  // getEquipmentListFilter service with moduleid  as the params
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public getEquipmentListFilter(</span>moduleId) {
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+      .get(`${CONFIG.urls.equipmentListFilter}?moduleId=${moduleId}`)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+        let filters = <span class="cstat-no" title="statement not covered" >(response &amp;&amp; response[0]) ? response[0] : null;</span>
+<span class="cstat-no" title="statement not covered" >        return filters;</span>
+      });
+  }
+&nbsp;
+   // updateEquipMetaData service with id,metaobj and moduleId  as the params
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public updateEquipMetaData(</span>id, metaObj, moduleId) {
+<span class="cstat-no" title="statement not covered" >    if (moduleId === 1) {</span>
+<span class="cstat-no" title="statement not covered" >      this.apiName2 = CONFIG.urls.equipmentMetadata;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.apiName2 = CONFIG.urls.equipmentMetadata2;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return this.http.put(this.apiName2 + '/' + id, metaObj)</span>
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+        let updateEquipmentMeta: any = <span class="cstat-no" title="statement not covered" >response;</span>
+<span class="cstat-no" title="statement not covered" >        return updateEquipmentMeta;</span>
+      });
+  }
+&nbsp;
+  // getEquipmentList service with moduleId , filterParams and sort  as the params
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public getEquipmentList(</span>moduleId, recordID, filterParams, sort) {
+<span class="cstat-no" title="statement not covered" >    if (moduleId === 1) {</span>
+<span class="cstat-no" title="statement not covered" >      this.apiName2 = CONFIG.urls.equipmentList;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.apiName2 = CONFIG.urls.equipmentList2;</span>
+    }
+    let url = `${<span class="cstat-no" title="statement not covered" >this.apiName2}?moduleId=${moduleId}`;</span>
+<span class="cstat-no" title="statement not covered" >    if (sort) {</span>
+<span class="cstat-no" title="statement not covered" >      url += `&amp;_sort=${sort.col}&amp;_order=${sort.order}`;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (recordID) {</span>
+<span class="cstat-no" title="statement not covered" >      url += `&amp;id=${recordID}`;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (filterParams.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      for (let filter<span class="cstat-no" title="statement not covered" > of filterParams) {</span></span>
+<span class="cstat-no" title="statement not covered" >        url += `&amp;${filter.key}=${filter.value}`;</span>
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+      .get(url)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        return (response);</span>
+      })
+      .share()
+      .catch(this.exceptionService.catchBadResponse);
+  }
+<span class="fstat-no" title="function not covered" >  public getModule( </span>moduleId ) {
+    const url = `${<span class="cstat-no" title="statement not covered" >CONFIG.urls.getModule}?moduleId=${moduleId}`;</span>
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+    .get(url)
+    .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+      let module = <span class="cstat-no" title="statement not covered" >(response &amp;&amp; response[0]) ? response[0] : null;</span>
+<span class="cstat-no" title="statement not covered" >      return module;</span>
+    });
+  }
+<span class="fstat-no" title="function not covered" >  public getStartedStatusForUser(</span>userId) {
+    const url = `${<span class="cstat-no" title="statement not covered" >CONFIG.urls.getStartedStatusForUser}/${userId}`;</span>
+<span class="cstat-no" title="statement not covered" >    return this.http</span>
+    .get(url)
+    .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+<span class="cstat-no" title="statement not covered" >      return response;</span>
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public putStartedStatusForUser(</span>userId, updatedUser) {
+     const url = `${<span class="cstat-no" title="statement not covered" >CONFIG.urls.getStartedStatusForUser}/${userId}`;</span>
+<span class="cstat-no" title="statement not covered" >     return  this.http</span>
+    .put(url, updatedUser)
+      .map(<span class="fstat-no" title="function not covered" >(</span>response: Response) =&gt; {
+<span class="cstat-no" title="statement not covered" >        console.log('SUCCESS', response);</span>
+<span class="cstat-no" title="statement not covered" >        return response;</span>
+      });
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

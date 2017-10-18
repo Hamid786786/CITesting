@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modules/nav/left/nav-left.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/modules/nav/left</a> nav-left.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.68% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>37/62</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.36% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.63% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>34/59</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ *  Side navigation bar that only shows once authenticated.
+ *  Fetches list of modules to display and delegates to LeftNavItemGroup.
+ *
+ *  ISSUES:
+ *  - Hover label is rendered as an absolutely positioned element where
+ *    its CSS 'top' property is calculated dynamically in onMouseOver().
+ *
+ */
+&nbsp;
+import {
+  Component, OnInit, Renderer, ElementRef,
+  ViewChild, trigger, state, style, animate,
+  transition, AfterViewInit, ViewEncapsulation
+} from '@angular/core';
+import {NavService , AuthService} from '@pl-core/_services';
+import {Router , ActivatedRoute} from '@angular/router';
+import {ISidebarItem} from '@pl-core/_interfaces';
+import {find} from 'lodash';
+&nbsp;
+@Component({
+  selector: 'pl-left-nav',
+  templateUrl: './nav-left.component.html',
+  styleUrls: ['./nav-left.component.scss'],
+  animations: [
+    trigger('expandedLabel', [
+      state('void', style({
+        transform: 'translateX(-100%)'
+      })),
+      state('*', style({
+        transform: 'translateX(0%)'
+      })),
+      transition('void &lt;=&gt; *', [
+        animate('200ms ease-out')
+      ])
+    ])
+  ],
+  encapsulation : ViewEncapsulation.None
+})
+// Menu items that navigate (route) to modules
+&nbsp;
+export class LeftNavComponent implements OnInit, AfterViewInit {
+&nbsp;
+  public isExpanded: boolean = false;
+&nbsp;
+  public _roleChangeSub;
+  public currentRole;
+  public currentUserDetail;
+  public currentRolesAccess;
+  public initialRole;
+  public currentRolesList: ISidebarItem[];
+  public expandSubMenu: boolean;
+  public path: any;
+  public hoveredItem: ISidebarItem;
+  public activeItem: ISidebarItem; // only used for non-routed items
+  public modules: ISidebarItem[];
+&nbsp;
+  // Other items anchored to the viewport's bottom
+  public items: ISidebarItem[];
+&nbsp;
+  @ViewChild('hoverLabel') public hoverLabelEl: ElementRef;
+  private _hoverLabelEl: HTMLElement;
+&nbsp;
+  private defaultModules: ISidebarItem[] = [
+    {routerUrl: '/dashboard', label: 'Dashboard', icon: 'icofont-dashboard'}
+  ];
+&nbsp;
+  private fixedItems: ISidebarItem[] = [
+    {label: 'Reports', icon: 'icofont-growth'},
+    {label: 'Notifications', icon: 'icofont-notification', badgeNum: 2},
+    {label: 'Help', icon: 'icofont-info-circle'}
+  ];
+&nbsp;
+  constructor(private _renderer: Renderer,
+              private _authService: AuthService,
+              private _routes: ActivatedRoute) {}
+  public ngOnInit() {
+&nbsp;
+    this.expandSubMenu = false;
+    let that = this;
+    let rolesList;
+&nbsp;
+    this.path = this._routes.routeConfig.path;
+    this.currentUserDetail = this._authService.currentUser();
+    this.initialRole = this.currentUserDetail;
+    that.currentRole = this.initialRole.currentRole;
+    this.currentRolesAccess = find(that.initialRole.roles, {value: this.initialRole.currentRole});
+    this.currentRolesList = this.currentRolesAccess.action;
+&nbsp;
+    that._roleChangeSub = this._authService.roleChangeEventEmitter.subscribe(<span class="fstat-no" title="function not covered" >(</span>role) =&gt; {
+<span class="cstat-no" title="statement not covered" >      that.currentRole = role;</span>
+<span class="cstat-no" title="statement not covered" >      that.currentUserDetail = this._authService.currentUser();</span>
+<span class="cstat-no" title="statement not covered" >      that.currentRolesAccess = find(that.currentUserDetail.roles, {value: that.currentRole});</span>
+<span class="cstat-no" title="statement not covered" >      that.currentRolesList = that.currentRolesAccess.action;</span>
+    });
+    // Subscriber Event that will occur on change of location
+    let fetchedModules: ISidebarItem[] = [
+      {routerUrl: '/task-list', label: 'Task List', icon: 'icofont-list'},
+      {routerUrl: '/dashboard/create/1234', label: 'Create Module', icon: 'icofont-pencil'},
+      {routerUrl: '/dashboard/change/1234/12', label: 'Change Module', icon: 'icofont-hammer'},
+      {routerUrl: '/dashboard/summary/1234/12', label: 'Summary Module', icon: 'icofont-list'},
+      {routerUrl: '/timesheet', label: 'Time Sheet', icon: 'icofont-time'}
+&nbsp;
+    ];
+&nbsp;
+    this.modules = [...this.defaultModules, ...fetchedModules];
+    this.items = this.fixedItems;
+&nbsp;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public toggleExpansion(</span>module) {
+<span class="cstat-no" title="statement not covered" >    if (module) {</span>
+<span class="cstat-no" title="statement not covered" >      if (module.subRole.length &gt; 0 &amp;&amp; !this.isExpanded) {</span>
+<span class="cstat-no" title="statement not covered" >        this.isExpanded = !this.isExpanded;</span>
+<span class="cstat-no" title="statement not covered" >        this.expandSubMenu = true;</span>
+<span class="cstat-no" title="statement not covered" >        if (!this.isExpanded) {</span>
+<span class="cstat-no" title="statement not covered" >          this.expandSubMenu = false;</span>
+        }
+      } else <span class="cstat-no" title="statement not covered" >if (this.isExpanded &amp;&amp; module.subRole.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.expandSubMenu = !this.expandSubMenu;</span>
+      }else {
+<span class="cstat-no" title="statement not covered" >        this.closeMenu();</span>
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.isExpanded = !this.isExpanded;</span>
+<span class="cstat-no" title="statement not covered" >      if (!this.isExpanded) {</span>
+<span class="cstat-no" title="statement not covered" >        this.expandSubMenu = false;</span>
+      }
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public handleClick(</span>event) {
+<span class="cstat-no" title="statement not covered" >    event.stopPropagation();</span>
+<span class="cstat-no" title="statement not covered" >    this.closeMenu();</span>
+  }
+<span class="fstat-no" title="function not covered" >  public closeMenu() {</span>
+<span class="cstat-no" title="statement not covered" >    this.hoveredItem = null;</span>
+<span class="cstat-no" title="statement not covered" >    this.isExpanded = false;</span>
+  }
+  public ngAfterViewInit() {
+    this._hoverLabelEl = this.hoverLabelEl.nativeElement;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public onSelect(</span>item: ISidebarItem) {
+<span class="cstat-no" title="statement not covered" >    this.activeItem = item;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public onMouseEnter(</span>item: ISidebarItem, el: HTMLElement): void {
+<span class="cstat-no" title="statement not covered" >    this.hoveredItem = item;</span>
+&nbsp;
+    // Hacky! - hover label element's parent is offset by a height
+    // of 60px by the top navbar
+    let labelTop: string = <span class="cstat-no" title="statement not covered" >(el.getBoundingClientRect().top - 60) + 'px';</span>
+<span class="cstat-no" title="statement not covered" >    this._renderer.setElementStyle(this._hoverLabelEl, 'top', labelTop);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public onMouseLeave(): void {</span>
+<span class="cstat-no" title="statement not covered" >    this.hoveredItem = null;</span>
+  }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

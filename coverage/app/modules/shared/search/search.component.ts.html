@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modules/shared/search/search.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/modules/shared/search</a> search.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40.88% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>56/137</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.94% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.32% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.21% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>47/123</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, ElementRef, EventEmitter, Input, OnInit, OnChanges, Output } from '@angular/core';
+import { CONFIG, GLOBAL } from '@pl-core/_config';
+import { ClickOutside } from '@pl-core/_directives/click-outside';
+import { GlobalService } from '@pl-core/_services';
+import { AuthService } from '@pl-core/_services/auth/auth.service';
+import { MdDialog } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+import { IIconFlags } from '@pl-core/_interfaces/common-search';
+import { ISearchRequestParams } from '@pl-core/_interfaces/common-search-params';
+&nbsp;
+@Component({
+    selector: 'app-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.scss']
+})
+export class SearchComponent implements OnInit, OnChanges {
+    public searchRes: any;
+    public params: ISearchRequestParams = {
+        q: '',
+        type: ''
+    };
+    public globalSearch: any;
+    public isOnBlur: boolean = false;
+    public toggleSearchExpand: boolean = false;
+    public highlighticon: boolean = false;
+    public searchEnter: boolean = false;
+    public iconFlags: IIconFlags = {
+        iconClass: false,
+        spanClass: false
+    };
+&nbsp;
+    @Input('placeHolderText') public placeHolderText: string;
+    @Input('classText') public classText: string = '';
+    @Input('searchUrl') public searchUrl: string;
+    @Input('clearModel') public clearModel: boolean;
+&nbsp;
+    @Input('iconClass') public iconClass: boolean;
+    @Input('spanIcon') public spanIcon: boolean;
+&nbsp;
+    // if [isFilter] is not passed from the component, default value will be FALSE
+    @Input('isFilter') public isFilter: boolean = false;
+    @Input('filter') public filter: string;
+    @Input('onEnterEvent') public onEnterEvent: boolean;
+    @Input('resetModalOnSelect') public resetModalOnSelect: boolean;
+&nbsp;
+    @Output() public selectCallback: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();
+    @Output() public resetSearch: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();
+    @Output() public modalValueOnFilterChange: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();
+    @Output() public iconAnimationCallback: EventEmitter&lt;any&gt; = new EventEmitter&lt;any&gt;();
+&nbsp;
+    constructor(private _globalService: GlobalService,
+                public dialog: MdDialog,
+                public el: ElementRef) {
+    }
+&nbsp;
+    public ngOnInit() {
+        this.search();
+    }
+&nbsp;
+    public ngOnChanges() {
+        this.iconFlags.iconClass = this.iconClass;
+        this.iconFlags.spanClass = this.spanIcon;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (this.isFilter) {
+<span class="cstat-no" title="statement not covered" >            if (this.filter != null &amp;&amp; this.filter.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                this.params.type = this.filter;</span>
+<span class="cstat-no" title="statement not covered" >                this.params.q = this.globalSearch;</span>
+            }
+        }
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public handleBlur() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >            this.highlighticon = false;</span>
+<span class="cstat-no" title="statement not covered" >            this.searchEnter = false;</span>
+            let highlighticon = <span class="cstat-no" title="statement not covered" >false;</span>
+<span class="cstat-no" title="statement not covered" >            this.iconAnimationCallback.emit({ highlighticon });</span>
+        }, 200);
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public handleFocus() {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >            this.highlighticon = true;</span>
+<span class="cstat-no" title="statement not covered" >            this.searchEnter = true;</span>
+            let highlighticon = <span class="cstat-no" title="statement not covered" >true;</span>
+<span class="cstat-no" title="statement not covered" >            this.iconAnimationCallback.emit({ highlighticon });</span>
+        }, 200);
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public handleDivClick(</span>$event) {</span>
+<span class="cstat-no" title="statement not covered" >        $event.stopPropagation();</span>
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >            this.highlighticon = true;</span>
+<span class="cstat-no" title="statement not covered" >            this.searchEnter = true;</span>
+            let highlighticon = <span class="cstat-no" title="statement not covered" >true;</span>
+<span class="cstat-no" title="statement not covered" >            this.iconAnimationCallback.emit({ highlighticon });</span>
+<span class="cstat-no" title="statement not covered" >            this.isOnBlur = false;</span>
+        }, 210);
+    }
+&nbsp;
+    public search() {
+&nbsp;
+        let observable = Observable.fromEvent(this.el.nativeElement, 'input');
+        observable
+            .debounceTime(1000)
+            .distinctUntilChanged()
+            .subscribe({
+                next: <span class="fstat-no" title="function not covered" >(</span>event: KeyboardEvent) =&gt; {
+                    let inputVal = (&lt;HTMLInputElement&gt; <span class="cstat-no" title="statement not covered" >event.target).value;</span>
+<span class="cstat-no" title="statement not covered" >                    this.toggleSearchExpand = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (inputVal.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        this.isOnBlur = true;</span>
+<span class="cstat-no" title="statement not covered" >                        this.highlighticon = true;</span>
+<span class="cstat-no" title="statement not covered" >                        this.params.q = '';</span>
+<span class="cstat-no" title="statement not covered" >                        this._globalService.setSearchData(this.params);</span>
+<span class="cstat-no" title="statement not covered" >                        this.resetSearch.emit(this._globalService.getSearchData());</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        this.highlighticon = true;</span>
+<span class="cstat-no" title="statement not covered" >                        this.isOnBlur = false;</span>
+<span class="cstat-no" title="statement not covered" >                        this.params.q = inputVal;</span>
+<span class="cstat-no" title="statement not covered" >                        this.callGlobalService(this.searchUrl, this.params);</span>
+<span class="cstat-no" title="statement not covered" >                        this._globalService.setSearchData(this.params);</span>
+                    }
+&nbsp;
+                }
+            });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public handleKeyupEnter() {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.onEnterEvent &amp;&amp; this.isFilter) {</span>
+<span class="cstat-no" title="statement not covered" >            this.isOnBlur = true;</span>
+<span class="cstat-no" title="statement not covered" >            if (this.filter.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                this.params.type = this.filter;</span>
+<span class="cstat-no" title="statement not covered" >                if (this.globalSearch !== undefined &amp;&amp; this.globalSearch.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.params.q = this.globalSearch;</span>
+                }
+&nbsp;
+            } else {
+<span class="cstat-no" title="statement not covered" >                this.params.type = '';</span>
+<span class="cstat-no" title="statement not covered" >                this.params.q = this.globalSearch;</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        this.modalValueOnFilterChange.emit(this.params);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public callGlobalService(</span>url, params) {</span>
+<span class="cstat-no" title="statement not covered" >        this._globalService.getCommonSearch(url, params).subscribe(<span class="fstat-no" title="function not covered" >(</span>_res) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            if (_res.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                this.isOnBlur = false;</span>
+            } else <span class="cstat-no" title="statement not covered" >if (_res.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                this.isOnBlur = true;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            this.searchRes = _res;</span>
+        });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public hide() {</span>
+<span class="cstat-no" title="statement not covered" >        this.isOnBlur = true;</span>
+<span class="cstat-no" title="statement not covered" >        this.highlighticon = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.searchEnter = false;</span>
+        let highlighticon = <span class="cstat-no" title="statement not covered" >this.searchEnter;</span>
+<span class="cstat-no" title="statement not covered" >        this.iconAnimationCallback.emit({ highlighticon });</span>
+<span class="cstat-no" title="statement not covered" >        this.globalSearch = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.params.q = this.globalSearch;</span>
+<span class="cstat-no" title="statement not covered" >        this._globalService.setSearchData(this.params);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public handleToggle(</span>type, $event) {
+<span class="cstat-no" title="statement not covered" >        $event.stopPropagation();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.isOnBlur = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.searchEnter = false;</span>
+<span class="cstat-no" title="statement not covered" >        for (let entry<span class="cstat-no" title="statement not covered" > of this.searchRes) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (type === entry.module) {</span>
+<span class="cstat-no" title="statement not covered" >                entry.toggleSearchExpand = !entry.toggleSearchExpand;</span>
+<span class="cstat-no" title="statement not covered" >                this.toggleSearchExpand = entry.toggleSearchExpand;</span>
+            }
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public emitSearchEvent(</span>moduleName, data) {
+<span class="cstat-no" title="statement not covered" >        if (this.clearModel) {</span>
+<span class="cstat-no" title="statement not covered" >            this.globalSearch = '';</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.selectCallback.emit({ moduleName, data });</span>
+<span class="cstat-no" title="statement not covered" >        this.isOnBlur = true;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    public handleIconToggle(</span>$event) {
+<span class="cstat-no" title="statement not covered" >        $event.stopPropagation();</span>
+<span class="cstat-no" title="statement not covered" >        this.searchEnter = !this.searchEnter;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if ((this.globalSearch === undefined || this.globalSearch == null)) {</span>
+<span class="cstat-no" title="statement not covered" >            this.highlighticon = this.searchEnter;</span>
+        } else <span class="cstat-no" title="statement not covered" >if (this.globalSearch !== undefined &amp;&amp; this.globalSearch.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            this.highlighticon = this.searchEnter;</span>
+&nbsp;
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.highlighticon = true;</span>
+        }
+        let highlighticon = <span class="cstat-no" title="statement not covered" >this.searchEnter;</span>
+<span class="cstat-no" title="statement not covered" >        this.iconAnimationCallback.emit({ highlighticon });</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modules/dyn-module/accordion/accordion.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/modules/dyn-module/accordion</a> accordion.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.36% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.48% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+&nbsp;
+@Component({
+    selector: 'app-accordion',
+    templateUrl: './accordion.component.html',
+    styleUrls: ['./accordion.component.scss']
+})
+export class AccordionComponent implements OnInit {
+    public <span class="cstat-no" title="statement not covered" >groups = [];</span>
+    public <span class="cstat-no" title="statement not covered" >headerIndex = 0;</span>
+    public <span class="cstat-no" title="statement not covered" >noOfRows = 0;</span>
+    @ViewChild('accordionDiv') public accordionDiv;
+    @Input() public header;
+    @Input() private accordion;
+    @Output() private <span class="cstat-no" title="statement not covered" >moreData = new EventEmitter&lt;any&gt;();</span>
+    private page;
+<span class="fstat-no" title="function not covered" >    constructor() {</span>
+        // constructor
+    }
+<span class="fstat-no" title="function not covered" >    public ngOnInit() {</span>
+        // ngInit
+        const cardHeight = <span class="cstat-no" title="statement not covered" >68;</span>
+        const remainingHeight =  <span class="cstat-no" title="statement not covered" >window.innerHeight - this.accordionDiv.nativeElement.offsetTop;</span>
+<span class="cstat-no" title="statement not covered" >        this.noOfRows = Math.floor((remainingHeight) / cardHeight) - 1;</span>
+<span class="cstat-no" title="statement not covered" >        console.log(this.noOfRows, remainingHeight, cardHeight);</span>
+<span class="cstat-no" title="statement not covered" >        this.accordionDiv.nativeElement.style.maxHeight = (this.noOfRows * cardHeight) + 'px';</span>
+<span class="cstat-no" title="statement not covered" >        this.page = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.moreRows();</span>
+<span class="cstat-no" title="statement not covered" >        console.log(this.accordionDiv);</span>
+    }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    public moreRows() {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.page += 1;</span>
+<span class="cstat-no" title="statement not covered" >        if ((this.page * this.noOfRows) &gt;= this.accordion.length) {</span>
+<span class="cstat-no" title="statement not covered" >            this.groups = this.accordion;</span>
+<span class="cstat-no" title="statement not covered" >            this.page = -1; </span>// to hide the more items icon
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.groups = this.accordion.slice(0, (this.page * this.noOfRows));</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.groups.map(<span class="fstat-no" title="function not covered" >(</span>group, i) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            group.heading = {</span>
+                label: this.header[this.headerIndex].headerLabel,
+                value: group[this.header[this.headerIndex].fieldId]
+            };
+        });
+    }
+<span class="fstat-no" title="function not covered" >    public moreDetails(</span>id) {
+<span class="cstat-no" title="statement not covered" >            this.moreData.emit(id);</span>
+        }
+&nbsp;
+    // public changeHeader(index) {
+    //   this.headerIndex = index;
+    //   this.groups.map((group) =&gt; {
+    //     group.heading  = `${this.header[this.headerIndex].headerLabel} : ${group[this.header[this.headerIndex].fieldId]}`;
+    //   });
+    // }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

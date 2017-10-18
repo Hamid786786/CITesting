@@ -1,8 +1,0 @@
-<div class="btn-create">
-    <button md-tooltip= "{{'Create Items' | translate}}" md-raised-button [mdMenuTriggerFor]="create">{{'Create' | translate}} <span class="add-icon"> <md-icon>add</md-icon></span>
-    </button>
-</div>
-
-<md-menu #create="mdMenu" [overlapTrigger]="false" class="create-new-action">
-    <button *ngFor="let btndata of createData " md-menu-item>{{ btndata.description }}</button>
-</md-menu>

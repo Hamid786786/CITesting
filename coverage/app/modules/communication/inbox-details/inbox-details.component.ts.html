@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modules/communication/inbox-details/inbox-details.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/modules/communication/inbox-details</a> inbox-details.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.53% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/68</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.69% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.22% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit, Input, ElementRef, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { InboxService, NodeDisplayService } from '@pl-core/_services/';
+import { DialogComponent } from '@pl-modules/dialog/dialog.component';
+import { MdDialog, MdSnackBar } from '@angular/material';
+import { TranslateService } from '@pl-core/_services/translate/translate.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
+import { IInboxDetails } from '@pl-core/_interfaces/inbox-details';
+import { GLOBAL} from '@pl-core/_config/constants';
+&nbsp;
+@Component({
+  selector: 'app-inbox-details',
+  templateUrl: './inbox-details.component.html',
+  styleUrls: ['./inbox-details.component.scss'],
+  providers: [InboxService],
+  encapsulation: ViewEncapsulation.None
+})
+&nbsp;
+export class InboxDetailsComponent implements OnInit, OnDestroy {
+  public inboxId: number;
+  public <span class="cstat-no" title="statement not covered" >inboxDetails: IInboxDetails = {</span>
+    to: null,
+    priority: null,
+    type: null,
+    from: null,
+    receivedOn: null,
+    greetings: null,
+    contentBody: null
+  };
+  public selectedOption: any;
+  public <span class="cstat-no" title="statement not covered" >priorityFlag: boolean = false;</span>
+  public prioritySubscription: Subscription;
+  public myElement: ElementRef;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" ></span>_inboxService: InboxService,</span>
+              public <span class="cstat-no" title="statement not covered" >dialog: MdDialog,</span>
+              public <span class="cstat-no" title="statement not covered" >translateService: TranslateService,</span>
+              public <span class="cstat-no" title="statement not covered" >_router: Router,</span>
+              public <span class="cstat-no" title="statement not covered" >NodeDisplayService: NodeDisplayService,</span>
+              myElement: ElementRef,
+              private <span class="cstat-no" title="statement not covered" >route: ActivatedRoute,</span>
+              private <span class="cstat-no" title="statement not covered" >snackBar: MdSnackBar)</span> {
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem('redirectOnMobile', 'inbox');</span>
+<span class="cstat-no" title="statement not covered" >    this.myElement = myElement;</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public ngOnInit() {</span></span>
+<span class="cstat-no" title="statement not covered" >    this.route.params.subscribe(<span class="fstat-no" title="function not covered" >(</span>params: Params) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.inboxId = +params['inboxId']; </span>// (+) converts string 'id' to a number;
+<span class="cstat-no" title="statement not covered" >      this._inboxService.getInboxDetails(this.inboxId).subscribe(<span class="fstat-no" title="function not covered" >(</span>_res) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.inboxDetails = _res;</span>
+      });
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.prioritySubscription = this.NodeDisplayService.node$.subscribe(<span class="fstat-no" title="function not covered" >(</span>node) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (node.id === this.inboxId) {</span>
+<span class="cstat-no" title="statement not covered" >        this._inboxService.getInboxDetails(node.id).subscribe(<span class="fstat-no" title="function not covered" >(</span>_res) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          this.inboxDetails = _res;</span>
+        });
+      }
+    });
+  }
+&nbsp;
+  // dialog pop up
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public showDialogPopup(</span>title, body): void {</span>
+    let dialogRef = <span class="cstat-no" title="statement not covered" >this.dialog.open(DialogComponent, { disableClose: true });</span> // pass properties here
+<span class="cstat-no" title="statement not covered" >    dialogRef.componentInstance.title = this.translateService.instant(`${title}`);</span>
+<span class="cstat-no" title="statement not covered" >    dialogRef.componentInstance.body = body;</span>
+<span class="cstat-no" title="statement not covered" >    dialogRef.componentInstance.button = this.translateService.instant('ok');</span>
+<span class="cstat-no" title="statement not covered" >    dialogRef.componentInstance.isAutherized = true;</span>
+<span class="cstat-no" title="statement not covered" >    dialogRef.afterClosed().subscribe(<span class="fstat-no" title="function not covered" >(</span>result) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.selectedOption = result;</span>
+    });
+  }
+&nbsp;
+  // on click of flag icon to set priority and set color to the flag
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  public setPriority(</span>Id, mailDetailItem) {</span>
+<span class="cstat-no" title="statement not covered" >    this.priorityFlag = mailDetailItem.isPrioritySet;</span>
+    let mailItem = <span class="cstat-no" title="statement not covered" >mailDetailItem;</span>
+<span class="cstat-no" title="statement not covered" >    mailItem.isPrioritySet = !this.priorityFlag;</span>
+<span class="cstat-no" title="statement not covered" >    this._inboxService.setPriority(Id, mailItem).subscribe(<span class="fstat-no" title="function not covered" >(</span>_res) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (_res) {</span>
+<span class="cstat-no" title="statement not covered" >        this.NodeDisplayService.addNode(_res);</span>
+<span class="cstat-no" title="statement not covered" >        if (_res.isPrioritySet) {</span>
+          let div = <span class="cstat-no" title="statement not covered" >this.myElement.nativeElement.querySelector('.priority' + Id).style.color = 'red';</span>
+        } else {
+          let div = <span class="cstat-no" title="statement not covered" >this.myElement.nativeElement.querySelector('.priority' + Id).style.color = 'grey';</span>
+        }
+      }
+    });
+&nbsp;
+  }
+&nbsp;
+  // toast messages for the actions commited
+<span class="fstat-no" title="function not covered" >  public callActionsOnClick(</span>actiontype) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    switch (actiontype) {</span>
+      case 'Approve': {
+<span class="cstat-no" title="statement not covered" >        this.snackBar.open(this.translateService.instant('Task Approved'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['success']
+        });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+      case 'Decline': {
+<span class="cstat-no" title="statement not covered" >        this.snackBar.open(this.translateService.instant('Task Declined'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['error']
+        });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+      case 'Reply': {
+<span class="cstat-no" title="statement not covered" >        this.snackBar.open(this.translateService.instant('Coming Soon'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['warning']
+        });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+&nbsp;
+      case 'Reply All': {
+<span class="cstat-no" title="statement not covered" >        this.snackBar.open(this.translateService.instant('Coming Soon'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['warning'],
+        });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+      case 'Forward': {
+<span class="cstat-no" title="statement not covered" >        this.snackBar.open(this.translateService.instant('Coming Soon'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['warning']
+        });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+      case 'More Information': {
+<span class="cstat-no" title="statement not covered" >        this.snackBar.open(this.translateService.instant('Coming Soon'), this.translateService.instant('close'), {</span>
+          duration: GLOBAL.constants.DURATION,
+          extraClasses: ['warning']
+        });
+        // TODO, need to write the redirect logic
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+      default:
+        ;
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public ngOnDestroy() {</span>
+<span class="cstat-no" title="statement not covered" >    this.prioritySubscription.unsubscribe();</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Oct 17 2017 12:58:49 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
