@@ -147,7 +147,8 @@ module.exports = function (config) {
       // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
       exitOnResourceError: true
     },
-     
+  
+    
     /*
      * Continuous Integration mode
      * if true, Karma captures browsers, runs the tests and exits
@@ -158,9 +159,10 @@ module.exports = function (config) {
      * Timeout definitions
      */
     captureTimeout: 60000,
-    browserDisconnectTimeout: 60000,
+    browserDisconnectTimeout: 2000,
     browserDisconnectTolerance: 0,
-    browserNoActivityTimeout: 60000
+    browserNoActivityTimeout: 60000,
+    singleRun:true    
   };
 
   if (process.env.TRAVIS) {
