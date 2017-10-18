@@ -160,7 +160,7 @@ module.exports = function (config) {
     captureTimeout: 90000,
     browserDisconnectTimeout: 60000,
     browserDisconnectTolerance: 2,
-    browserNoActivityTimeout: 90000
+    browserNoActivityTimeout: 1800000
   };
 
   if (process.env.TRAVIS) {
